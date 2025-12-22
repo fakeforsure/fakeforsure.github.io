@@ -98,6 +98,7 @@ main{
 }
 
 mark { /* 1 of 2 */
+    border-radius: 0.2rem;
     padding: 0 0.75rem;
     background-color: var(--pink);
     color: var(--main-black);
