@@ -32,6 +32,7 @@ On: December 21, 2025
     --accent-text: var(--main-white);
     --accent-link: #2D2D2D;
     --accent-tooltip: #8B8B8B;
+    --accent-highlight: var(--blue);
 }
 
 * {
@@ -179,13 +180,13 @@ img{
 }
 
 .picker:hover {
-    color: var(--blue);
-    border-bottom: 2px solid var(--blue);
+    color: var(--accent-highlight);
+    border-bottom: 2px solid var(--accent-highlight);
 }
 
 .picker:focus {
-    color: var(--blue);
-    border-bottom: 4px solid var(--blue);
+    color: var(--accent-highlight);
+    border-bottom: 4px solid var(--accent-highlight);
 }
 
 .picker.picker-active, 
@@ -226,11 +227,11 @@ img{
 }
 
 .button:hover {
-    background-color: var(--blue);
+    background-color: var(--accent-highlight);
 }
 
 .button:focus {
-    background-color: var(--blue);
+    background-color: var(--accent-highlight);
 }
 
 .contact-buttons { /* Contains grid elements */
@@ -255,14 +256,17 @@ footer {
     border-top: 2px solid var(--accent-border);
 }
 
-main {
+main, article {
     margin: 1rem;
 }
 
 section {
+    margin-bottom: 0.5rem;
+}
+
+section, article {
     border-radius: 0.9rem;
     padding: 0.4rem 1rem;
-    margin-bottom: 0.5rem;
     background-color: var(--accent-card);
 }
 
@@ -296,7 +300,7 @@ section {
 }
 
 .card:focus {
-    border: 2px solid var(--blue);
+    border: 2px solid var(--accent-highlight);
 }
 
 
@@ -357,13 +361,13 @@ section {
 
     .picker.picker-home:hover {
         display: inline;
-        color: var(--blue);
-        border-bottom: 2px solid var(--blue);
+        color: var(--accent-highlight);
+        border-bottom: 2px solid var(--accent-highlight);
     }   
 
     .picker.picker-home:focus {
         display: inline;
-        border-bottom: 4px solid var(--blue);
+        border-bottom: 4px solid var(--accent-highlight);
     }
 
     .contact-buttons { /* Contains grid elements */
@@ -389,5 +393,18 @@ section {
 
     .contact-buttons { /* Contains grid elements */
         grid-template-columns: 100%;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        /* Accent Colors */
+        --accent-bg: var(--main-white);
+        --accent-card: #B9B9B9;
+        --accent-border: #A1A1A1;
+        --accent-text: var(--main-black);
+        --accent-link: #8B8B8B;
+        --accent-tooltip: #4D4D4D;
+        --accent-highlight: var(--brown);
     }
 }
