@@ -6,17 +6,388 @@ On: December 21, 2025
 
 /* - SETUP ACROSS PAGES - */
 /* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap'); /* Use as "Balsamiq Sans" */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap'); /* Use as "Bree Serif" */
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap'); /* Use as "Outfit" */
 
-/* Get Google API Fonts */
 
 
 /* All */
 :root {
-    /* Colors - To Reorganize */
+    /* Brand Colors */
     --orange: #FB9402;
     --brown: #990301;
     --pink: #F3A6C9;
     --blue: #99D9EA;
-    --black: #161616;
-    --white: #E8E8E8;
+
+    /* Main Colors */
+    --main-black: #161616;
+    --main-gray: #474645;
+    --main-white: #E8E8E8;
+
+    /* Accent Colors */
+    --accent-bg: var(--main-black);
+    --accent-card: var(--main-gray);
+    --accent-border: #2F2F31;
+    --accent-text: var(--main-white);
+    --accent-link: #2D2D2D;
+    --accent-tooltip: #8B8B8B;
+}
+
+* {
+    box-sizing: border-box;
+    transition-property: all;
+    z-index: 1; /* Unless otherwise changed */
+}
+
+
+
+/* Defaults */
+html {
+    scroll-behavior: smooth !important;
+    background: var(--accent-bg);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#icon {
+    color: var(--black)
+}
+
+main{
+    margin: 0 1rem;
+    padding-bottom: 5rem;
+}
+
+p, li {
+    font-size: 1rem;
+    color: var(--accent-text);
+    font-family: "Outfit", Arial, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--accent-text);
+    font-family: "Outfit", Helvetica, Verdana, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Balsamiq Sans", Helvetica, Verdana, sans-serif;
+    color: var(--accent-text);
+    margin: 0.5rem 0;
+}
+
+h4, h5, h6 {
+    font-family: "Balsamiq Sans", Helvetica, Verdana, sans-serif;
+    color: var(--accent-tooltip);
+    margin: 0.15rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+img{
+    border-radius: 0.5rem;
+}
+
+
+
+/* Text Emphasis */
+.normal {
+    font-style: normal;
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.sans {
+    font-family: "Balsamiq Sans", sans-serif;
+}
+
+.serif {
+    font-family: "Bree Serif", serif;
+}
+
+
+
+/* Major Grid Elements */
+.grid {
+    display: grid;
+    gap: 0 1rem;
+}
+
+.main-grid {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+        "side nav"
+        "side projects"
+    ;
+}
+
+.card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(16.5rem, 1fr));
+    grid-auto-rows: 16.5rem;
+    gap: 1rem;
+}
+
+
+
+/* Navigation Elements */
+.picker {
+    text-decoration: none;
+    margin: 0 0.5rem;
+    padding: 0.4rem 1rem;
+    font-size: 1.5rem;
+    color: var(--accent-text);
+    border-bottom: 2px solid var(--accent-border);
+
+    transition-property: color, border;
+    transition-duration: 0.2s;
+}
+
+.picker:hover {
+    color: var(--blue);
+    border-bottom: 2px solid var(--blue);
+}
+
+.picker:focus {
+    color: var(--blue);
+    border-bottom: 4px solid var(--blue);
+}
+
+.picker.picker-active, 
+.picker.picker-active:hover {
+    color: var(--pink);
+    border-bottom: 2px solid var(--pink);
+}
+
+.picker.picker-active:focus {
+    border-bottom: 4px solid var(--pink);
+}
+
+.picker.picker-home,
+.picker.picker-home:hover {
+    display: none;
+    color: var(--orange);
+    border-bottom: 2px solid var(--orange);
+}
+
+.picker.picker-home:focus {
+    border-bottom: 4px solid var(--orange);
+}
+
+
+
+/* Button Elements */
+.button {
+    text-decoration: none;
+    margin: 1rem 0rem;
+    border-radius: 0.9rem;
+    padding: 0.4rem 1rem;
+    font-size: 1.1rem;
+    background-color: var(--accent-text);
+    color: var(--accent-card);
+
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+}
+
+.button:hover {
+    background-color: var(--blue);
+}
+
+.button:focus {
+    background-color: var(--blue);
+}
+
+.contact-buttons { /* Contains grid elements */
+    margin: 0;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+/* Section Elements*/
+#top {
+    margin: 0.1rem;
+    z-index: 100;
+}
+
+footer {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--accent-link);
+    border-top: 2px solid var(--accent-border);
+}
+
+main {
+    margin: 1rem;
+}
+
+section {
+    border-radius: 0.9rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--accent-card);
+}
+
+.side {
+    grid-area: side;
+    margin: 0;
+    width: 100%;
+}
+
+.nav {
+    grid-area: nav;
+    margin: 0 0 1rem 0;
+    width: 100%;
+}
+
+
+
+/* Card Elements */
+.card {
+    border-radius: 0.9rem;
+    padding: 1rem 0.5rem;
+    background-color: var(--accent-bg);
+    border: 2px solid var(--accent-bg);
+
+    transition-property: color, border;
+    transition-duration: 0.2s;
+}
+
+.card:hover {
+    border: 2px solid var(--accent-border);
+}
+
+.card:focus {
+    border: 2px solid var(--blue);
+}
+
+
+
+/* Images */
+.img-title {
+    width: 100%;
+}
+
+.img-project {
+    height: 7.5rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+
+/* Any @media Stuff Down Here - XXX ALWAYS AT THE BOTTOM XXX */
+
+@media (width > 64rem) {
+    .side {
+        width: 30rem;
+    }
+}
+
+@media (width < 64rem) {
+    .nav-bar{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: auto;
+    }
+
+    .nav {
+        background-color: var(--accent-bg);
+        height: 4rem;
+        width: 100%;
+        margin: 0 0;
+        padding: 1rem 0;
+        position: fixed; 
+        top: 0;
+    }
+    
+    .main-grid {
+        margin-top: 5rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "side"
+            "projects"
+        ;
+    }
+
+    .picker.picker-home  {
+        display: inline;
+        color: var(--main-white);
+        border-bottom: 2px solid var(--accent-border);
+    }
+
+    .picker.picker-home:hover {
+        display: inline;
+        color: var(--blue);
+        border-bottom: 2px solid var(--blue);
+    }   
+
+    .picker.picker-home:focus {
+        display: inline;
+        border-bottom: 4px solid var(--blue);
+    }
+
+    .contact-buttons { /* Contains grid elements */
+        grid-template-columns: 30rem;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (width > 35rem) {
+    .side {
+        width: 100%;
+    }
+
+    .img-title {
+        width: 30rem;
+    }
+}
+
+@media (width < 35rem) {
+    .side {
+        width: 100%;
+    }
+
+    .contact-buttons { /* Contains grid elements */
+        grid-template-columns: 100%;
+    }
 }
