@@ -20,19 +20,28 @@ On: December 21, 2025
     --pink: #F3A6C9;
     --blue: #99D9EA;
 
+    /* Blue Shades */
+    --blue_dark: #081D22;
+    --blue_black: #020A0C;
+    --blue_mid: #37B5D6;
+    --blue_light: #CAEBF4;
+    --blue_glaze: #D4D4DE;
+
     /* Main Colors */
     --main-black: #161616;
     --main-gray: #474645;
     --main-white: #E8E8E8;
 
     /* Accent Colors */
-    --accent-bg: var(--main-black);
+    --accent-bg: var(--blue_black);
     --accent-card: var(--main-gray);
     --accent-border: #2F2F31;
     --accent-text: var(--main-white);
+    --accent-text_flip: var(--main-black);
     --accent-link: #2D2D2D;
     --accent-tooltip: #8B8B8B;
     --accent-highlight: var(--blue);
+    --accent-gradient: var(--blue_dark);
 }
 
 * {
@@ -64,6 +73,39 @@ main{
     padding-bottom: 5rem;
 }
 
+
+
+/* Text Emphasis */
+.normal {
+    font-style: normal;
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.sans {
+    font-family: "Balsamiq Sans", sans-serif;
+}
+
+.serif {
+    font-family: "Bree Serif", serif;
+}
+
+mark { /* 1 of 2 */
+    padding: 0 0.75rem;
+    background-color: var(--pink);
+    color: var(--main-black);
+}
+
+
+
+/* Text Elements */
 p, ul, li, figcaption {
     font-size: 1rem;
     color: var(--accent-text);
@@ -91,6 +133,10 @@ h1, h2, h3 {
     font-family: "Balsamiq Sans", Helvetica, Verdana, sans-serif;
     color: var(--accent-text);
     margin: 0.5rem 0;
+    
+    mark { /* 2 of 2 */
+        color: var(--brown);
+    }
 }
 
 h4, h5, h6 {
@@ -125,30 +171,6 @@ h6 {
 
 img{
     border-radius: 0.5rem;
-}
-
-
-
-/* Text Emphasis */
-.normal {
-    font-style: normal;
-    font-weight: 400;
-}
-
-.bold {
-    font-weight: 700;
-}
-
-.italic {
-    font-style: italic;
-}
-
-.sans {
-    font-family: "Balsamiq Sans", sans-serif;
-}
-
-.serif {
-    font-family: "Bree Serif", serif;
 }
 
 
@@ -330,7 +352,7 @@ article {
 .card {
     border-radius: 0.9rem;
     padding: 1rem 0.5rem;
-    background: linear-gradient(to bottom right, var(--accent-card) 0%, var(--accent-bg) 70%);
+    background: linear-gradient(to bottom right, var(--accent-card) 0%, var(--accent-gradient) 70%);
     border: 2px solid var(--accent-border);
     box-shadow: 0 0.1rem 0 rgba(0,0,0,0.01) inset, 0 0.5rem 0.5rem rgba(255,255,255,0.05);
 }
@@ -371,17 +393,19 @@ article {
 
 
 
-/* Any @media Stuff Down Here - XXX ALWAYS AT THE BOTTOM XXX */
+/* @media */
 @media (prefers-color-scheme: light) {
     :root {
         /* Accent Colors */
-        --accent-bg: var(--main-white);
+        --accent-bg: var(--blue_light);
         --accent-card: #C6C6C6;
         --accent-border: #A8A8A8;
         --accent-text: var(--main-black);
+    --accent-text_flip: var(--main-white);
         --accent-link: #8B8B8B;
         --accent-tooltip: #4D4D4D;
         --accent-highlight: var(--brown);
+        --accent-gradient: var(--blue_glaze);
     }
 
     .card {
