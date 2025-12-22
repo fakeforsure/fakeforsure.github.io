@@ -1,0 +1,22 @@
+/*
+Main CSS - Portfolio
+By: Luc Bassaler-Merpillat
+On: December 21, 2025
+*/
+
+/* - SETUP ACROSS PAGES - */
+/* Imports */
+
+/* Get Google API Fonts */
+
+
+/* All */
+:root {
+    /* Colors - To Reorganize */
+    --orange: #FB9402;
+    --brown: #990301;
+    --pink: #F3A6C9;
+    --blue: #99D9EA;
+    --black: #161616;
+    --white: #E8E8E8;
+}
