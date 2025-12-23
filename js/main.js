@@ -15,14 +15,14 @@ function openTab(evt, tabName) {
     const tabcontent = document.getElementsByClassName("tabcontent");
     const tablinks = document.getElementsByClassName("tablinks");
 
-    // MOBILE: behave like normal tabs
+    // MOBILE: one panel at a time
     if (!isDesktop) {
         for (let i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
         }
     }
 
-    // Desktop: only hide right-side panels
+    // DESKTOP: keep right-side pannel, hide others
     if (isDesktop) {
         document.getElementById("projects").style.display = "none";
         document.getElementById("skills").style.display = "none";
