@@ -41,6 +41,7 @@ On: December 21, 2025
     --accent-link: #2D2D2D;
     --accent-tooltip: #8B8B8B;
     --accent-highlight: var(--blue);
+    --accent-active: var(--pink);
     --accent-gradient: var(--blue_dark);
 }
 
@@ -208,6 +209,7 @@ img{
 
 /* Navigation Elements */
 .picker {
+    display: inline-block;
     text-decoration: none;
     margin: 0 0.5rem;
     padding: 0.4rem 1rem;
@@ -226,25 +228,14 @@ img{
     border-bottom: 4px solid var(--accent-highlight);
 }
 
-.picker.picker-active, 
-.picker.picker-active:hover {
-    color: var(--pink);
-    border-bottom: 2px solid var(--pink);
+.picker.active, 
+.picker.active:hover {
+    color: var(--accent-active);
+    border-bottom: 2px solid var(--accent-active);
 }
 
-.picker.picker-active:focus {
-    border-bottom: 4px solid var(--pink);
-}
-
-.picker.picker-home,
-.picker.picker-home:hover {
-    display: none;
-    color: var(--orange);
-    border-bottom: 2px solid var(--orange);
-}
-
-.picker.picker-home:focus {
-    border-bottom: 4px solid var(--orange);
+.picker.active:focus {
+    border-bottom: 4px solid var(--accent-active);
 }
 
 
@@ -339,6 +330,7 @@ article {
 }
 
 .nav {
+    display: block;
     grid-area: nav;
     margin: 0 0 1rem 0;
     width: 100%;
@@ -402,6 +394,10 @@ article {
     overflow: hidden;
 }
 
+.tablinks {
+    border-bottom: 2px solid var(--accent-border);
+}
+
 .tabcontent {
     display: none;
 }
@@ -415,10 +411,24 @@ article {
         display: block !important;
     }
 
+    .picker  {
+        border-bottom: 2px solid var(--accent-border);
+    }
+
+    .picker.active {
+        border-bottom: 2px solid var(--accent-active);
+        color: var(--accent-active);
+    }
+
     .picker-home {
         pointer-events: none;
         opacity: 0.6;
         cursor: default;
+    }
+
+    .picker-home:hover {
+        color: var(--accent-text);
+        border-bottom: 2px solid var(--accent-border);
     }
 }
 
@@ -432,10 +442,11 @@ article {
         --accent-card: #C6C6C6;
         --accent-border: #A8A8A8;
         --accent-text: var(--main-black);
-    --accent-text_flip: var(--main-white);
+        --accent-text_flip: var(--main-white);
         --accent-link: #8B8B8B;
         --accent-tooltip: #4D4D4D;
-        --accent-highlight: var(--brown);
+        --accent-highlight: var(--orange);
+        --accent-active: var(--brown);
         --accent-gradient: var(--blue_glaze);
     }
 
@@ -461,13 +472,13 @@ article {
 @media (width < 64rem) {
     .nav {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        background-color: var(--accent-bg);
-        height: 4rem;
+        height: auto;
         width: 100%;
-        margin: 0 0;
-        padding: 1rem 0;
+        margin: 0;
+        padding: 0.75rem 0;
         position: fixed; 
         top: 0;
+        background-color: var(--accent-bg);
     }
     
     .main-grid {
@@ -480,23 +491,6 @@ article {
             "projects"
             "skills"
         ;
-    }
-
-    .picker.picker-home  {
-        display: inline;
-        color: var(--main-white);
-        border-bottom: 2px solid var(--accent-border);
-    }
-
-    .picker.picker-home:hover {
-        display: inline;
-        color: var(--accent-highlight);
-        border-bottom: 2px solid var(--accent-highlight);
-    }   
-
-    .picker.picker-home:focus {
-        display: inline;
-        border-bottom: 4px solid var(--accent-highlight);
     }
 
     .contact-buttons  { /* Contains grid elements */

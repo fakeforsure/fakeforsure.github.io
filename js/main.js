@@ -5,6 +5,10 @@ On: December 22, 2025
 */
 
 /* Tabbed Content Functionality */
+let lastIsDesktop = window.matchMedia("(min-width: 64rem)").matches;
+let isFirstLoad = true;
+
+
 function openTab(evt, tabName) {
     const isDesktop = window.matchMedia("(min-width: 64rem)").matches;
 
@@ -14,7 +18,7 @@ function openTab(evt, tabName) {
     // MOBILE: behave like normal tabs
     if (!isDesktop) {
         for (let i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+            tabcontent[i].style.display = "none";
         }
     }
 
@@ -35,11 +39,27 @@ function openTab(evt, tabName) {
 function openDefaultTab() {
     const isDesktop = window.matchMedia("(min-width: 64rem)").matches;
 
-    if (isDesktop) {
-        document.getElementById("projectsTab").click();
-    } else {
-        document.getElementById("homeTab").click();
+    if (isFirstLoad) {
+        if (isDesktop) {
+            document.getElementById("projectsTab").click();
+        } 
+        else {
+            document.getElementById("homeTab").click();
+        }
+        isFirstLoad = false;
+        lastIsDesktop = isDesktop;
+        return;
     }
+
+    if (lastIsDesktop && !isDesktop) {
+        document.getElementById("homeTab").click();
+    } 
+    else if (!lastIsDesktop && isDesktop) {
+        if (document.getElementById("skillsTab").classList.contains("active")) document.getElementById("skillsTab").click();
+        else document.getElementById("projectsTab").click();
+    }
+
+    lastIsDesktop = isDesktop;
 }
 
 openDefaultTab();
