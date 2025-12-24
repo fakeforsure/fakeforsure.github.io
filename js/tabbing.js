@@ -1,5 +1,5 @@
 /*
-Main JavaScript - Portfolio
+Tabbing JavaScript - Portfolio
 By: Luc Bassaler-Merpillat
 On: December 22, 2025
 */
