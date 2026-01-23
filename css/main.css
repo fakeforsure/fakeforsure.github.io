@@ -32,8 +32,8 @@ On: December 21, 2025
     --main-gray: #474645;
     --main-white: #E8E8E8;
 
-    /* Accent Colors */
-    --accent-bg: var(--blue_black);
+    /* OLD Accent Colors */
+    /* --accent-bg: var(--blue_black);
     --accent-card: var(--main-gray);
     --accent-border: #2F2F31;
     --accent-text: var(--main-white);
@@ -43,7 +43,20 @@ On: December 21, 2025
     --accent-highlight: var(--blue);
     --accent-active: var(--pink);
     --accent-gradient: var(--blue_dark);
-    --accent-special: #220808;
+    --accent-special: #220808; */
+
+    /* NEW Accent Colors */
+    --accent-bg: var(--main-white);
+    --accent-card: #C6C6C6;
+    --accent-border: #A8A8A8;
+    --accent-text: var(--main-black);
+    --accent-text_flip: var(--main-white);
+    --accent-link: #8B8B8B;
+    --accent-tooltip: #4D4D4D;
+    --accent-highlight: var(--pink);
+    --accent-active: var(--brown);
+    --accent-gradient: var(--blue_glaze);
+    --accent-special: #E8BFBF;
 }
 
 * {
@@ -70,9 +83,8 @@ body {
     color: var(--black)
 }
 
-main{
-    margin: 0 1rem;
-    padding-bottom: 5rem;
+img {
+    cursor: zoom-in;
 }
 
 
@@ -100,7 +112,7 @@ main{
 }
 
 mark { /* 1 of 2 */
-    border-radius: 0.2rem;
+    border-radius: 0.35rem;
     padding: 0 0.75rem;
     background-color: var(--pink);
     color: var(--main-black);
@@ -109,12 +121,18 @@ mark { /* 1 of 2 */
 
 
 /* Text Elements */
-p, ul, li, figcaption {
-    font-size: 1rem;
+p, ul, ol, li, a {
+    font-size: 1.2rem;
     color: var(--accent-text);
     font-family: "Outfit", Arial, Verdana, sans-serif;
 }
 
+figcaption {
+    color: var(--accent-text);
+    font-family: "Outfit", Arial, Verdana, sans-serif;
+}
+
+ol,
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -127,16 +145,13 @@ li {
 a {
     text-decoration: none;
     cursor: pointer;
-    font-size: 1.1rem;
-    color: var(--accent-text);
-    font-family: "Outfit", Helvetica, Verdana, Arial, sans-serif;
 }
 
 h1, h2, h3 {
     font-family: "Balsamiq Sans", Helvetica, Verdana, sans-serif;
     color: var(--accent-text);
     margin: 0.5rem 0;
-    
+
     mark { /* 2 of 2 */
         color: var(--brown);
     }
@@ -156,20 +171,8 @@ h2 {
     font-size: 1.5rem;
 }
 
-h3 {
+h3, h4, h5, h6 {
     font-size: 1.25rem;
-}
-
-h4 {
-    font-size: 1.125rem;
-}
-
-h5 {
-    font-size: 1.1rem;
-}
-
-h6 {
-    font-size: 1rem;
 }
 
 img{
@@ -182,16 +185,6 @@ img{
 .grid {
     display: grid;
     gap: 0 1rem;
-}
-
-.main-grid {
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: min-content 1fr;
-    grid-template-areas:
-        "side nav"
-        "side projects"
-        "side skills"
-    ;
 }
 
 .card-grid {
@@ -225,8 +218,10 @@ img{
 }
 
 .picker:focus {
-    color: var(--accent-highlight);
+    /* color: var(--accent-highlight); */
     border-bottom: 4px solid var(--accent-highlight);
+    background-color: var(--main-gray);
+    color: var(--main-white);
 }
 
 .picker.active, 
@@ -237,6 +232,31 @@ img{
 
 .picker.active:focus {
     border-bottom: 4px solid var(--accent-active);
+    background-color: var(--main-gray);
+    color: var(--main-white);
+}
+
+.tablinks {
+    background-color: var(--blue_light);
+    border: 2px solid var(--pink);
+    border-radius: 0.25rem;
+    color: var(--accent-text);
+    outline: none;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+}
+
+.tablinks.active,
+.tablinks:hover {
+    color: var(--accent-active);
+    border: 2px solid var(--accent-active);
+}
+
+.tablinks:focus,
+.tablinks.active:focus {
+    background-color: var(--main-gray);
+    color: var(--main-white);
 }
 
 
@@ -248,31 +268,23 @@ img{
     border-radius: 0.9rem;
     padding: 0.4rem 1rem;
     font-size: 1.1rem;
-    background-color: var(--accent-text);
-    color: var(--accent-card);
+    background-color: var(--accent-highlight);
+    color: var(--main-black);
 }
 
 .button:hover {
-    background-color: var(--accent-highlight);
+    background-color: var(--main-white);
+    color: var(--brown);
 }
 
 .button:focus {
-    background-color: var(--accent-highlight);
+    background-color: var(--main-gray);
+    color: var(--main-white);
 }
 
-.contact-buttons { /* Contains grid elements */
-    margin: 0;
-    grid-template-columns: 1fr 1fr;
-}
-
-.back-bar {
-    background-color: var(--accent-bg);
-    margin: 0;
-    width: 100%;
-    padding: 1rem;
-    position: fixed;
-    top: 0;
-    z-index: 2;
+.contact-buttons {
+    display: inline-block;
+    margin: 0.2rem 0;
 }
 
 #return {
@@ -280,11 +292,7 @@ img{
 }
 
 #article {
-    margin-top: 4rem;
     overflow: auto;
-    p, ul, ol, li, a {
-        font-size: 1.4rem;
-    }
 }
 
 
@@ -300,47 +308,50 @@ footer {
     width: 100%;
     margin: 0;
     padding: 1rem;
-    background-color: var(--accent-link);
+    background-color: var(--accent-card);
     border-top: 2px solid var(--accent-border);
 }
 
-main, article {
+.main, .article {
     margin: 1rem;
+    margin-top: 5rem;
+    border-radius: 0.9rem;
+    background-color: var(--blue);
+    padding: 5rem 1rem;
 }
 
-section, article {
+.section, .article {
     border-radius: 0.9rem;
     padding: 0.4rem 1rem;
 }
 
-section {
+.section {
     margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, var(--accent-card) 0%, var(--accent-border) 100%);
-    box-shadow: 0 0.1rem 0 rgba(0,0,0,0.01) inset, 0 0.5rem 0.5rem rgba(255,255,255,0.05);
-}
-
-article {
-    background: linear-gradient(to bottom right, var(--accent-card) 0%, var(--accent-border) 70%, var(--accent-link) 100%);
-    box-shadow: 0 0.1rem 0 rgba(0,0,0,0.01) inset, 0 0.5rem 0.5rem rgba(255,255,255,0.05);
 }
 
 .side {
-    grid-area: side;
     margin: 0;
     width: 100%;
 }
 
 .nav {
-    display: block;
-    grid-area: nav;
-    margin: 0 0 1rem 0;
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 0.75rem 0;
+    background-color: var(--accent-bg);
     width: 100%;
+    position: fixed; 
+    top: 0;
     z-index: 2;
 }
 
 .location {
     margin-top: 0.25rem;
     grid-template-columns: 1fr;
+}
+
+.filterlist-filters {
+    margin-bottom: 1rem;
 }
 
 
@@ -376,6 +387,7 @@ article {
 }
 
 .img-project {
+    cursor: pointer;
     height: 7.5rem;
     width: 100%;
     object-fit: cover;
@@ -396,132 +408,95 @@ article {
 
 
 
-/* Tab Content */
-.tab {
-    overflow: hidden;
+/* Content */
+.content_intro {
+    text-align: center;
+    margin-bottom: 5rem;
 }
 
-.tablinks {
-    border-bottom: 2px solid var(--accent-border);
-}
-
-.tabcontent {
-    display: none;
-}
-
-.tabcontent.active {
+.content_about { /* Contains grid elements */
+    gap: 1rem;
+    grid-template-columns: 0.65fr 1fr;
     display: grid;
 }
 
-@media (min-width: 64rem) {
-    #side {
-        display: block !important;
-    }
+#carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    height: 20rem;
+}
 
-    .picker  {
-        border-bottom: 2px solid var(--accent-border);
-    }
+#carousel img {
+    width: 100%;
+    height: 24rem;
+    object-fit: cover;
+    object-position: center center;
+}
 
-    .picker.active {
-        border-bottom: 2px solid var(--accent-active);
-        color: var(--accent-active);
-    }
+.marking {
+    border-radius: 0.35rem;
+    margin: 0.25rem 0;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--main-white);
+    color: var(--main-black);
+}
 
-    .picker-home {
-        display: none;
-        pointer-events: none;
-        opacity: 0.6;
-        cursor: default;
-    }
+/* Experience (Things In This Section Are Shamefully Helped By AI) */
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
 
-    .picker-home:hover {
-        color: var(--accent-text);
-        border-bottom: 2px solid var(--accent-border);
-    }
+.image-lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    cursor: zoom-out;
+    border-radius: 0.5rem;
+    z-index: 6;
+}
+
+#copypastePopup {
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent-text);
+    color: var(--accent-card);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-size: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 7;
+}
+
+#filterlist .card {
+    transition: all 0.3s ease;
 }
 
 
 
 /* Any other @media */
-@media (prefers-color-scheme: light) {
-    :root {
-        /* Accent Colors */
-        --accent-bg: var(--blue_light);
-        --accent-card: #C6C6C6;
-        --accent-border: #A8A8A8;
-        --accent-text: var(--main-black);
-        --accent-text_flip: var(--main-white);
-        --accent-link: #8B8B8B;
-        --accent-tooltip: #4D4D4D;
-        --accent-highlight: var(--orange);
-        --accent-active: var(--brown);
-        --accent-gradient: var(--blue_glaze);
-        --accent-special: #E8BFBF;
-    }
-
-    .card {
-        box-shadow: 0 0.1rem 0 rgba(255,255,255,0.01) inset, 0 0.5rem 0.5rem rgba(0,0,0,0.1);
-    }
-
-    article {
-        box-shadow: 0 0.1rem 0 rgba(255,255,255,0.01) inset, 0 0.5rem 0.5rem rgba(0,0,0,0.1);
-    }
-
-    section {
-        box-shadow: 0 0.1rem 0 rgba(255,255,255,0.01) inset, 0 0.5rem 0.5rem rgba(0,0,0,0.1);
-    }
-
-    .button {
-        background-color: var(--accent-text_flip);
-        color: var(--main-gray);
-    }
-
-    .button:hover {
-        background-color: var(--blue);
+@media (width < 68rem) {
+    .content_about {
+        display: inline-block;
     }
 }
 
 @media (width > 64rem) {
     .side {
         width: 30rem;
-    }
-
-    .picker-home {
-        display: none;
-    }
-}
-
-@media (width < 64rem) {
-    .nav {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        height: auto;
-        width: 100%;
-        margin: 0;
-        padding: 0.75rem 0;
-        position: fixed; 
-        top: 0;
-        background-color: var(--accent-bg);
-    }
-    
-    .main-grid {
-        margin-top: 5rem;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas:
-            /* "nav" */
-            "side"
-            "projects"
-            "skills"
-        ;
-    }
-
-    .contact-buttons  { /* Contains grid elements */
-        grid-template-columns: 30rem;
-        grid-template-rows: 1fr 1fr;
-    }
-
-    .picker-home {
-        display: inline-block;
     }
 }
 
@@ -546,9 +521,5 @@ article {
 @media (width < 35rem) {
     .side {
         width: 100%;
-    }
-
-    .contact-buttons { /* Contains grid elements */
-        grid-template-columns: 100%;
     }
 }

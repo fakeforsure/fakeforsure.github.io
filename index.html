@@ -15,15 +15,15 @@ On: December 12, 2025
         <meta name="author" content="Luc Bassaler-Merpillat">
         <meta name="title" content="Home | Luc's Portfolio - Owl Dev">
         <meta name="description" content="Welcome to Luc's portfolio website! It's where I'm showcasing my projects and skills.">
-        <meta name="theme-color" content="#161616"/>
+        <meta name="theme-color" content="#99D9EA"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://www.owldev.ca/"/>
-        <meta property="og:title" content="Owl Dev"/>
+        <meta property="og:title" content="Luc's Portfolio @ Owl Dev"/>
         <meta property="og:description" content="Welcome to Luc's portfolio website! It's where I'm showcasing my projects and skills."/>
         <meta property="og:image" content="img/owl/banner2.png"/>
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://www.owldev.ca/"/>
-        <meta property="twitter:title" content="Owl Dev"/>
+        <meta property="twitter:title" content="Luc's Portfolio @ Owl Dev"/>
         <meta property="twitter:description" content="Welcome to Luc's portfolio website! It's where I'm showcasing my projects and skills."/>
         <meta property="twitter:image" content="img/owl/banner2.png"/>
 
@@ -36,194 +36,31 @@ On: December 12, 2025
     <body>
         <div id="top"></div>
 
-        <main class="grid main-grid">
-            <div id="side" class="tabcontent side">
-                <section class="content_intro">
-                    <h1><mark>Owl Dev</mark></h1>
-                    <img src="img/owl/head+bg.png" alt="The logo of Owl Dev" class="img-title">
-                    <p>Welcome to my portfolio!</p>
-                    <p>Scroll to see more details.</p>
-                </section>
-                <section class="content_about">
+        <nav id="nav" class="nav">
+            <a tabindex="1" href="index.html" class="picker active" id="homeTab">Home</a>
+            <a tabindex="1" href="projects.html" class="picker" id="projectsTab">Projects</a>
+            <a tabindex="1" href="skills.html" class="picker" id="skillsTab">Skills</a>
+        </nav>
+
+        <main class="main">
+            <section class="section content_intro">
+                <img src="img/owl/head.png" alt="The logo of Owl Dev" class="img-title zoomable">
+                <h1><mark>Luc's Portfolio</mark></h1>
+                <a  tabindex="0" id="copyEmail" class="contact-buttons button">Co-op Contact Info: <em class="normal bold">lpb3@sfu.ca</em></a>
+            </section>
+
+            <section class="section content_about">
+                <div>
                     <h2><mark>Luc Bassaler-Merpillat</mark></h2>
-                    <p><mark>Graphic Design - Mobile and Web Interactions - UI/UX</mark></p>
-                    <img src="img/luc/luc_square.png" alt="A photo of Luc Bassaler-Merpillat" class="img-title">
-                    <div class="grid contact-buttons">
-                        <a class="button bold" href="mailto:lpb3@sfu.ca">Co-op Contact Info: <mark>lpb3@sfu.ca</mark></a>
-                        <a class="button" href="mailto:luc@owldev.ca"> Other Inquiries Contact Info: <mark>luc@owldev.ca</mark></a>
-                    </div>
-                    <p><em class="normal serif">Luc</em> is a young adult with a passion for graphic design, mobile/web development, user interface, and user experience.</p>
-                    <p>His interest in the field started in 2018 when he launched his own business Owl Dev. selling a multitude of graphic designs and coding snippets for enthusiasts of the Roblox universe, a video game platform made to create and play other's creations. Born and raised in France, he spent his youthful years there before relocating to Canada. Living in diverse regions around the world has provided him with a well-rounded perspective on design. He gained valuable insights into various design interpretations worldwide and observed how different cultures approach design uniquely.</p>
-                </section>
-            </div>
-
-            <nav id="nav" class="tab nav">
-                <span></span>
-                <a tabindex="0" onkeydown="openTab(event, 'side')" onclick="openTab(event, 'side')" class="picker picker-home tablinks" id="homeTab">Home</a>
-                <a tabindex="0" onkeydown="openTab(event, 'projects')" onclick="openTab(event, 'projects')" class="picker tablinks" id="projectsTab">Projects</a>
-                <a tabindex="0" onkeydown="openTab(event, 'skills')" onclick="openTab(event, 'skills')" class="picker tablinks" id="skillsTab">Skills</a>
-            </nav>
-
-            <div id="projects" class="tabcontent grid card-grid projects">
-                <!-- NOTE: each <a> represents a project card, spaces to separate, BY DATE -->
-                
-                <!-- 2025/12 - Pet Adoption Services -->
-                <a id="project_iat235_petadoption" href="projects/iat235-petadoption.html" class="card">
-                    <img src="img/picks/iat235-petadoption.png" alt="An image of the Pet Adoption Services project" class="img-project">
-                    <h3>Pet Adoption Services</h3>
-                    <h4>Front-End Developer</h4>
-                    <h4 class="italic">Team Project</h4>
-                    <h5 class="normal italic">December 2025</h5>
-                </a>
-                
-                <!-- 2025/08 - Tap&Go Audio Stick -->
-                <a id="project_iat238_audiostick" href="projects/iat238-audiostick.html" class="card">
-                    <img src="img/picks/iat238-audiostick.png" alt="An image of the Tap&Go Audio Stick project" class="img-project">
-                    <h3>Tap&Go Audio Stick</h3>
-                    <h4>Lead Designer</h4>
-                    <h4 class="italic">Team Project</h4>
-                    <h5 class="normal italic">August 2025</h5>
-                </a>
-
-                <!-- 2023/10 - Career Centre Banner -->
-                <a id="project_client-careerbanner" href="projects/client-careerbanner.html" class="card">
-                    <img src="img/picks/client-careerbanner.jpg" alt="An image of the Career Centre Banner project" class="img-project">
-                    <h3>Career Centre Banner</h3>
-                    <h4>Designer</h4>
-                    <h4 class="italic">Solo Project</h4>
-                    <h5 class="normal italic">October 2023</h5>
-                </a>
-            </div>
-
-            <div id="skills" class="tabcontent grid card-grid skills">
-                <!-- NOTE: each <a> represents a project card, spaces to separate, BY DATE -->
-                
-                <!-- Skill - Figma -->
-                <a id="skill_figma" class="card no_link">
-                    <img src="img/thumbs/figma.png" alt="Logo of Figma" class="img-project">
-                    <h3>Figma</h3>
-                    <h4><br></h4>
-                    <h4 class="italic"><br></h4>
-                    <h5 class="normal italic">No Link</h5>
-                </a>
-
-                <!-- Skill - Framer -->
-                <a id="skill_framer" class="card no_link">
-                    <img src="img/thumbs/framer.png" alt="Logo of Framer" class="img-project">
-                    <h3>Framer</h3>
-                    <h4><br></h4>
-                    <h4 class="italic"><br></h4>
-                    <h5 class="normal italic">No Link</h5>
-                </a>
-
-                <!-- Skill - InDesign -->
-                <a id="skill_indesign" class="card no_link">
-                    <img src="img/thumbs/indesign.png" alt="Logo of InDesign" class="img-project">
-                    <h3>InDesign</h3>
-                    <h4><br></h4>
-                    <h4 class="italic"><br></h4>
-                    <h5 class="normal italic">No Link</h5>
-                </a>
-
-                <!-- Skill - Photoshop -->
-                <a id="skill_photoshop" class="card no_link">
-                    <img src="img/thumbs/photoshop.png" alt="Logo of Photoshop" class="img-project">
-                    <h3>Photoshop</h3>
-                    <h4><br></h4>
-                    <h4 class="italic"><br></h4>
-                    <h5 class="normal italic">No Link</h5>
-                </a>
-
-                <!-- Skill - After Effects -->
-                <a id="skill_aftereffects" class="card no_link">
-                    <img src="img/thumbs/aftereffects.png" alt="Logo of After Effects" class="img-project">
-                    <h3>After Effects</h3>
-                    <h4><br></h4>
-                    <h4 class="italic"><br></h4>
-                    <h5 class="normal italic">No Link</h5>
-                </a>
-
-                <!-- Skill - Premiere Pro -->
-                <a id="skill_premierepro" class="card no_link">
-                    <img src="img/thumbs/premierepro.png" alt="Logo of Premiere Pro" class="img-project">
-                    <h3>Premiere Pro</h3>
-                    <h4><br></h4>
-                    <h4 class="italic"><br></h4>
-                    <h5 class="normal italic">No Link</h5>
-                </a>
-
-                <!-- Skill - ROBLOX -->
-                <a id="skill_roblox" href="https://create.roblox.com/talent/creators/858808662" target="_blank" class="card">
-                    <img src="img/thumbs/roblox.png" alt="My ROBLOX talent page" class="img-project">
-                    <h3>ROBLOX</h3>
-                    <h4>ROBLOX Studio</h4>
-                    <h4 class="italic">Luau</h4>
-                    <h5 class="normal italic">Open In New Tab/Log In</h5>
-                </a>
-
-                <!-- Skill - Java Processing -->
-                <a id="skill_javaprocessing" href="https://www.youtube.com/watch?v=vmnQH7nTMI0&t=147s" target="_blank" class="card">
-                    <img src="img/thumbs/javaprocessing.png" alt="My YouTube video of Processing final project" class="img-project">
-                    <h3>Java Processing</h3>
-                    <h4><br></h4>
-                    <h4 class="italic"><br></h4>
-                    <h5 class="normal italic">Open In New Tab</h5>
-                </a>
-
-                <!-- Skill - Java -->
-                <a id="skill_java" class="card no_link">
-                    <img src="img/thumbs/java.png" alt="Logo of Java" class="img-project">
-                    <h3>Java</h3>
-                    <h4><br></h4>
-                    <h4 class="italic"><br></h4>
-                    <h5 class="normal italic">No Link</h5>
-                </a>
-
-                <!-- Skill - Python -->
-                <a id="skill_python" class="card no_link">
-                    <img src="img/thumbs/python.png" alt="Logo of Python" class="img-project">
-                    <h3>Python</h3>
-                    <h4><br></h4>
-                    <h4 class="italic"><br></h4>
-                    <h5 class="normal italic">No Link</h5>
-                </a>
-
-                <!-- Skill - HTML -->
-                <a id="skill_html" class="card no_link">
-                    <img src="img/thumbs/html.png" alt="Logo of HTML" class="img-project">
-                    <h3>HTML</h3>
-                    <h4><br></h4>
-                    <h4 class="italic"><br></h4>
-                    <h5 class="normal italic">No Link</h5>
-                </a>
-
-                <!-- Skill - CSS -->
-                <a id="skill_css" class="card no_link">
-                    <img src="img/thumbs/css.png" alt="Logo of CSS" class="img-project">
-                    <h3>CSS</h3>
-                    <h4><br></h4>
-                    <h4 class="italic"><br></h4>
-                    <h5 class="normal italic">No Link</h5>
-                </a>
-
-                <!-- Skill - JavaScript -->
-                <a id="skill_javascript" class="card no_link">
-                    <img src="img/thumbs/javascript.png" alt="Logo of JavaScript" class="img-project">
-                    <h3>JavaScript</h3>
-                    <h4><br></h4>
-                    <h4 class="italic"><br></h4>
-                    <h5 class="normal italic">No Link</h5>
-                </a>
-
-                <!-- Skill - Blender -->
-                <a id="skill_blender" class="card no_link">
-                    <img src="img/thumbs/blender.png" alt="Logo of Blender" class="img-project">
-                    <h3>Blender</h3>
-                    <h4><br></h4>
-                    <h4 class="italic"><br></h4>
-                    <h5 class="normal italic">No Link</h5>
-                </a>
-            </div>
+                    <h3><mark>Front-End Developer - UI/UX Designer</mark></h3>
+                    <p class="marking"><em class="normal serif">Luc</em> is a young adult with a passion for graphic design, mobile/web development, user interface, and user experience.</p>
+                    <p class="marking">His interest in the field started in 2018 when he launched his own business Owl Dev selling a multitude of graphic designs and coding snippets for enthusiasts of the Roblox universe, a video game platform made to create and play other's creations. Born and raised in France, he spent his youthful years there before relocating to Canada. Living in diverse regions around the world has provided him with a well-rounded perspective on design by giving him unique design practices from different regions of the world. He gained valuable insights into various design interpretations worldwide and observed how different cultures approach design uniquely.</p>
+                </div>
+                <div id="carousel" class="content_about">
+                    <img src="img/luc/luc_square.png" alt="A photo of Luc Bassaler-Merpillat" class="img-title zoomable">
+                    <img src="img/luc/luc-alt_square.png" alt="A photo of Luc Bassaler-Merpillat" class="img-title zoomable">
+                </div>
+            </section>
         </main>
 
         <footer>
@@ -232,6 +69,7 @@ On: December 12, 2025
             <p class="sans">Established in 2018. Incorporated in Canada in 2021.</p>
         </footer>
 
-        <script src="js/tabbing.js"></script>
+        <script src="js/lightbox.js"></script>
+        <script src="js/copypaste.js"></script>
     </body>
 </html>

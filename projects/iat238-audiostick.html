@@ -14,7 +14,7 @@ On: December 21, 2025
         <meta name="author" content="Luc Bassaler-Merpillat">
         <meta name="title" content="Tap&Go Audio Stick | Luc's Portfolio - Owl Dev">
         <meta name="description" content="Project page for the Tap&Go Audio Stick, an accessibility device designed to help older adults access exhibition information.">
-        <meta name="theme-color" content="#161616"/>
+        <meta name="theme-color" content="#99D9EA"/>
 
         <!-- Title -->
         <title>Tap&Go Audio Stick - Projects | Owl Dev</title>
@@ -25,12 +25,13 @@ On: December 21, 2025
     <body>
         <div id="top"></div>
 
-        <div class="back-bar">
-            <a id="return" class="button bold" href="../index.html">Return Home</a>
-            <a class="button" href="mailto:lpb3@sfu.ca">Co-op Contact Info: lpb3@sfu.ca</a>
-        </div>
+        <nav id="nav" class="nav">
+            <a tabindex="0" href="../index.html" class="picker" id="homeTab">Home</a>
+            <a tabindex="0" href="../projects.html" class="picker active" id="projectsTab">Projects</a>
+            <a tabindex="0" href="../skills.html" class="picker" id="skillsTab">Skills</a>
+        </nav>
 
-        <article id="article">
+        <article id="article" class="article">
             <h1>Tap&Go Audio Stick</h1>
             <figure class="figure-article">
                 <img class="img-article" src="../img/picks/iat238-audiostick.png" alt="An image showcasing the Tap&Go Audio Stick project">
@@ -70,5 +71,8 @@ On: December 21, 2025
             <p class="sans">© 2018-<script>document.write(/\d{4}/.exec(Date())[0])</script> Owl Dev Inc. All rights reserved.</p>
             <p class="sans">Established in 2018. Incorporated in Canada in 2021.</p>
         </footer>
+
+        <script src="js/lightbox.js"></script>
+        <script src="js/copypaste.js"></script>
     </body>
 </html>

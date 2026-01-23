@@ -1,5 +1,5 @@
 <!-- 
-Tap&Go Audio Stick (Project) - Portfolio
+Career Centre Banner (Project) - Portfolio
 By: Luc Bassaler-Merpillat
 On: December 22, 2025
 -->
@@ -13,8 +13,8 @@ On: December 22, 2025
         <!-- Metadata -->
         <meta name="author" content="Luc Bassaler-Merpillat">
         <meta name="title" content="Career Centre Banner | Luc's Portfolio - Owl Dev">
-        <meta name="description" content="Welcome to my portfolio website showcasing my projects and skills.">
-        <meta name="theme-color" content="#161616"/>
+        <meta name="description" content="Project page for the Career Centre Banner, a promotional banner designed to highlight opportunities for students before graduation.">
+        <meta name="theme-color" content="#99D9EA"/>
 
         <!-- Title -->
         <title>Career Centre Banner - Projects | Owl Dev</title>
@@ -25,12 +25,13 @@ On: December 22, 2025
     <body>
         <div id="top"></div>
 
-        <div class="back-bar">
-            <a id="return" class="button bold" href="../index.html">Return Home</a>
-            <a class="button" href="mailto:lpb3@sfu.ca">Co-op Contact Info: lpb3@sfu.ca</a>
-        </div>
+        <nav id="nav" class="nav">
+            <a tabindex="0" href="../index.html" class="picker" id="homeTab">Home</a>
+            <a tabindex="0" href="../projects.html" class="picker active" id="projectsTab">Projects</a>
+            <a tabindex="0" href="../skills.html" class="picker" id="skillsTab">Skills</a>
+        </nav>
 
-        <article id="article">
+        <article id="article" class="article">
             <h1>Career Centre Banner</h1>
             <figure class="figure-article">
                 <img class="img-article" src="../img/picks/client-careerbanner.jpg" alt="An image showcasing the Career Centre Banner project">
@@ -61,5 +62,8 @@ On: December 22, 2025
             <p class="sans">© 2018-<script>document.write(/\d{4}/.exec(Date())[0])</script> Owl Dev Inc. All rights reserved.</p>
             <p class="sans">Established in 2018. Incorporated in Canada in 2021.</p>
         </footer>
+
+        <script src="js/lightbox.js"></script>
+        <script src="js/copypaste.js"></script>
     </body>
 </html>

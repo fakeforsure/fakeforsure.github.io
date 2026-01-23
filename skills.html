@@ -1,0 +1,181 @@
+<!-- 
+Index (Home) HTML - Portfolio
+By: Luc Bassaler-Merpillat
+On: December 12, 2025
+-->
+
+<!DOCTYPE html>
+<html lang="en-CA">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://www.owldev.ca/"/>
+
+        <!-- Metadata -->
+        <meta name="author" content="Luc Bassaler-Merpillat">
+        <meta name="title" content="Skills | Luc's Portfolio - Owl Dev">
+        <meta name="description" content="A showcase of Luc's skills! From front-end development to user-experience design.">
+        <meta name="theme-color" content="#99D9EA"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://www.owldev.ca/"/>
+        <meta property="og:title" content="Luc's Skills @ Owl Dev"/>
+        <meta property="og:description" content="A showcase of Luc's skills! From front-end development to user-experience design."/>
+        <meta property="og:image" content="img/owl/banner2.png"/>
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://www.owldev.ca/"/>
+        <meta property="twitter:title" content="Luc's Skills @ Owl Dev"/>
+        <meta property="twitter:description" content="A showcase of Luc's skills! From front-end development to user-experience design."/>
+        <meta property="twitter:image" content="img/owl/banner2.png"/>
+
+        <!-- Title -->
+        <title>Skills | Owl Dev</title>
+        <link id="icon" rel="icon" href="img/owl/icon.png">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <div id="top"></div>
+
+        <nav id="nav" class="nav">
+            <a tabindex="2" href="index.html" class="picker" id="homeTab">Home</a>
+            <a tabindex="2" href="projects.html" class="picker" id="projectsTab">Projects</a>
+            <a tabindex="2" href="skills.html" class="picker active" id="skillsTab">Skills</a>
+        </nav>
+
+        <main class="main grid main-grid">
+            <section class="section content_intro">
+                <img src="img/owl/head.png" alt="The logo of Owl Dev" class="img-title zoomable">
+                <h1><mark>Luc's Skills</mark></h1>
+                <a tabindex="1" id="copyEmail" class="contact-buttons button">Co-op Contact Info: <em class="normal bold">lpb3@sfu.ca</em></a>
+            </section>
+
+            <div class="filterlist-filters">
+                <button tabindex="0" class="tablinks active" onclick="filterSkills(event, 'all')">All</button>
+                <button tabindex="0" class="tablinks" onclick="filterSkills(event, 'frontend')">Front-End Development</button>
+                <button tabindex="0" class="tablinks" onclick="filterSkills(event, 'uxui')">UX/UI Design</button>
+            </div>
+
+            <div id="filterlist" class="tabcontent grid card-grid skills">
+                <!-- NOTE: each <a> represents a project card, spaces to separate, BY DATE -->
+                
+                <!-- Skill - Figma -->
+                <a id="skill_figma" class="card no_link" data-category="uxui">
+                    <img src="img/thumbs/figma.png" alt="Logo of Figma" class="img-project">
+                    <h3>Figma</h3>
+                    <h4><br></h4>
+                    <h4 class="italic"><br></h4>
+                    <h5 class="normal italic">No Link</h5>
+                </a>
+
+                <!-- Skill - HTML -->
+                <a id="skill_html" class="card no_link" data-category="frontend">
+                    <img src="img/thumbs/html.png" alt="Logo of HTML" class="img-project">
+                    <h3>HTML</h3>
+                    <h4><br></h4>
+                    <h4 class="italic"><br></h4>
+                    <h5 class="normal italic">No Link</h5>
+                </a>
+
+                <!-- Skill - CSS -->
+                <a id="skill_css" class="card no_link" data-category="frontend">
+                    <img src="img/thumbs/css.png" alt="Logo of CSS" class="img-project">
+                    <h3>CSS</h3>
+                    <h4><br></h4>
+                    <h4 class="italic"><br></h4>
+                    <h5 class="normal italic">No Link</h5>
+                </a>
+
+                <!-- Skill - InDesign -->
+                <a id="skill_indesign" class="card no_link" data-category="uxui">
+                    <img src="img/thumbs/indesign.png" alt="Logo of InDesign" class="img-project">
+                    <h3>InDesign</h3>
+                    <h4><br></h4>
+                    <h4 class="italic"><br></h4>
+                    <h5 class="normal italic">No Link</h5>
+                </a>
+
+                <!-- Skill - Photoshop -->
+                <a id="skill_photoshop" class="card no_link" data-category="uxui">
+                    <img src="img/thumbs/photoshop.png" alt="Logo of Photoshop" class="img-project">
+                    <h3>Photoshop</h3>
+                    <h4><br></h4>
+                    <h4 class="italic"><br></h4>
+                    <h5 class="normal italic">No Link</h5>
+                </a>
+
+                <!-- Skill - After Effects -->
+                <a id="skill_aftereffects" class="card no_link" data-category="uxui">
+                    <img src="img/thumbs/aftereffects.png" alt="Logo of After Effects" class="img-project">
+                    <h3>After Effects</h3>
+                    <h4><br></h4>
+                    <h4 class="italic"><br></h4>
+                    <h5 class="normal italic">No Link</h5>
+                </a>
+
+                <!-- Skill - Premiere Pro -->
+                <a id="skill_premierepro" class="card no_link" data-category="uxui">
+                    <img src="img/thumbs/premierepro.png" alt="Logo of Premiere Pro" class="img-project">
+                    <h3>Premiere Pro</h3>
+                    <h4><br></h4>
+                    <h4 class="italic"><br></h4>
+                    <h5 class="normal italic">No Link</h5>
+                </a>
+
+                <!-- Skill - Framer -->
+                <a id="skill_framer" class="card no_link" data-category="uxui">
+                    <img src="img/thumbs/framer.png" alt="Logo of Framer" class="img-project">
+                    <h3>Framer</h3>
+                    <h4><br></h4>
+                    <h4 class="italic"><br></h4>
+                    <h5 class="normal italic">No Link</h5>
+                </a>
+
+                <!-- Skill - Roblox -->
+                <a id="skill_roblox" href="https://create.roblox.com/talent/creators/858808662" target="_blank" class="card" data-category="frontend">
+                    <img src="img/thumbs/roblox.png" alt="My Roblox talent page" class="img-project">
+                    <h3>Roblox</h3>
+                    <h4>Roblox Studio</h4>
+                    <h4 class="italic">Luau</h4>
+                    <h5 class="normal italic">Open In New Tab/Log In</h5>
+                </a>
+
+                <!-- Skill - Java Processing -->
+                <a id="skill_javaprocessing" href="https://www.youtube.com/watch?v=vmnQH7nTMI0&t=147s" target="_blank" class="card" data-category="frontend">
+                    <img src="img/thumbs/javaprocessing.png" alt="My YouTube video of Processing final project" class="img-project">
+                    <h3>Java Processing</h3>
+                    <h4><br></h4>
+                    <h4 class="italic"><br></h4>
+                    <h5 class="normal italic">Open In New Tab</h5>
+                </a>
+
+                <!-- Skill - Java -->
+                <a id="skill_java" class="card no_link" data-category="frontend">
+                    <img src="img/thumbs/java.png" alt="Logo of Java" class="img-project">
+                    <h3>Java</h3>
+                    <h4><br></h4>
+                    <h4 class="italic"><br></h4>
+                    <h5 class="normal italic">No Link</h5>
+                </a>
+
+                <!-- Skill - Python -->
+                <a id="skill_python" class="card no_link" data-category="frontend">
+                    <img src="img/thumbs/python.png" alt="Logo of Python" class="img-project">
+                    <h3>Python</h3>
+                    <h4><br></h4>
+                    <h4 class="italic"><br></h4>
+                    <h5 class="normal italic">No Link</h5>
+                </a>
+            </div>
+        </main>
+
+        <footer>
+            <p class="sans">By Luc Bassaler-Merpillat.</p>
+            <p class="sans">© 2018-<script>document.write(/\d{4}/.exec(Date())[0])</script> Owl Dev Inc. All rights reserved.</p>
+            <p class="sans">Established in 2018. Incorporated in Canada in 2021.</p>
+        </footer>
+
+        <script src="js/filter.js"></script>
+        <script src="js/lightbox.js"></script>
+        <script src="js/copypaste.js"></script>
+    </body>
+</html>

@@ -1,5 +1,5 @@
 <!-- 
-Tap&Go Audio Stick (Project) - Portfolio
+Pet Adoption Services (Project) - Portfolio
 By: Luc Bassaler-Merpillat
 On: December 22, 2025
 -->
@@ -14,7 +14,7 @@ On: December 22, 2025
         <meta name="author" content="Luc Bassaler-Merpillat">
         <meta name="title" content="Pet Adoption Services | Luc's Portfolio - Owl Dev">
         <meta name="description" content="Project page for the Pet Adoption Services, a fake platform designed to connect pets with loving homes.">
-        <meta name="theme-color" content="#161616"/>
+        <meta name="theme-color" content="#99D9EA"/>
 
         <!-- Title -->
         <title>Pet Adoption Services - Projects | Owl Dev</title>
@@ -25,15 +25,16 @@ On: December 22, 2025
     <body>
         <div id="top"></div>
 
-        <div class="back-bar">
-            <a id="return" class="button bold" href="../index.html">Return Home</a>
-            <a class="button" href="mailto:lpb3@sfu.ca">Co-op Contact Info: lpb3@sfu.ca</a>
-        </div>
+        <nav id="nav" class="nav">
+            <a tabindex="0" href="../index.html" class="picker" id="homeTab">Home</a>
+            <a tabindex="0" href="../projects.html" class="picker active" id="projectsTab">Projects</a>
+            <a tabindex="0" href="../skills.html" class="picker" id="skillsTab">Skills</a>
+        </nav>
 
-        <article id="article">
+        <article id="article" class="article">
             <h1>Pet Adoption Services</h1>
             <figure class="figure-article">
-                <img class="img-article" src="../img/picks/iat235-petadoption.png" alt="An image showcasing the Pet Adoption Services home page design">
+                <img class="img-article zoomable" src="../img/picks/iat235-petadoption.png" alt="An image showcasing the Pet Adoption Services home page design">
                 <figcaption>Showcase of the Pet Adoption Services home page design. The color scheme features a calm pastel purple throughout, and an animal is featured at the top of the home page. Three team members are highlighted at the bottom of the home page.</figcaption>
             </figure>
             <p><em class="normal bold">Course & Date:</em> IAT 235 - Information Design - December 2025 (Fall 2025 Term).</p>
@@ -52,7 +53,7 @@ On: December 22, 2025
                 <li>Chose the images used throughout the site to complement the overall design and theme using only copyright-free images from Wikimedia.</li>
             </ul>
             <figure class="figure-article">
-                <img class="img-article" src="../img/picks/iat235-petadoption2.png" alt="An image showcasing the Pet Adoption Services single pet page design">
+                <img class="img-article zoomable" src="../img/picks/iat235-petadoption2.png" alt="An image showcasing the Pet Adoption Services single pet page design">
                 <figcaption>Showcase of the Pet Adoption Services single pet page design. The pet is featured on the left of the screen, while important information is on the right. The information is display in two clusters: quick facts with pet compatibility, and the description.</figcaption>
             </figure>
             <ul><em class="normal bold">Challenges & Adaptations:</em>
@@ -71,5 +72,8 @@ On: December 22, 2025
             <p class="sans">© 2018-<script>document.write(/\d{4}/.exec(Date())[0])</script> Owl Dev Inc. All rights reserved.</p>
             <p class="sans">Established in 2018. Incorporated in Canada in 2021.</p>
         </footer>
+
+        <script src="js/lightbox.js"></script>
+        <script src="js/copypaste.js"></script>
     </body>
 </html>

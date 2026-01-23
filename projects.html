@@ -1,0 +1,100 @@
+<!-- 
+Projects HTML - Portfolio
+By: Luc Bassaler-Merpillat
+On: January 22, 2026
+-->
+
+<!DOCTYPE html>
+<html lang="en-CA">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://www.owldev.ca/projects.html"/>
+
+        <!-- Metadata -->
+        <meta name="author" content="Luc Bassaler-Merpillat">
+        <meta name="title" content="Projects | Luc's Portfolio - Owl Dev">
+        <meta name="description" content="A showcase of Luc's projects! From front-end development to user-experience design.">
+        <meta name="theme-color" content="#99D9EA"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://www.owldev.ca/projects.html"/>
+        <meta property="og:title" content="Luc's Projects @ Owl Dev"/>
+        <meta property="og:description" content="A showcase of Luc's projects! From front-end development to user-experience design."/>
+        <meta property="og:image" content="img/owl/banner2.png"/>
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://www.owldev.ca/projects.html"/>
+        <meta property="twitter:title" content="Luc's Projects @ Owl Dev"/>
+        <meta property="twitter:description" content="A showcase of Luc's projects! From front-end development to user-experience design."/>
+        <meta property="twitter:image" content="img/owl/banner2.png"/>
+
+        <!-- Title -->
+        <title>Projects | Owl Dev</title>
+        <link id="icon" rel="icon" href="img/owl/icon.png">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+    <body>
+        <div id="top"></div>
+
+        <nav id="nav" class="nav">
+            <a tabindex="1" href="index.html" class="picker" id="homeTab">Home</a>
+            <a tabindex="1" href="projects.html" class="picker active" id="projectsTab">Projects</a>
+            <a tabindex="1" href="skills.html" class="picker" id="skillsTab">Skills</a>
+        </nav>
+
+        <main class="main grid main-grid">
+            <section class="section content_intro">
+                <img src="img/owl/head.png" alt="The logo of Owl Dev" class="img-title zoomable">
+                <h1><mark>Luc's Projects</mark></h1>
+                <a  tabindex="0" id="copyEmail" class="contact-buttons button">Co-op Contact Info: <em class="normal bold">lpb3@sfu.ca</em></a>
+            </section>
+
+            <div class="filterlist-filters">
+                <button tabindex="0" class="tablinks active" onclick="filterSkills(event, 'all')">All</button>
+                <button tabindex="0" class="tablinks" onclick="filterSkills(event, 'frontend')">Front-End Development</button>
+                <button tabindex="0" class="tablinks" onclick="filterSkills(event, 'uxui')">UX/UI Design</button>
+            </div>
+
+            <div id="filterlist" class="tabcontent grid card-grid projects">
+                <!-- NOTE: each <a> represents a project card, spaces to separate, BY DATE -->
+                
+                <!-- 2025/12 - Pet Adoption Services -->
+                <a id="project_iat235_petadoption" href="projects/iat235-petadoption.html" class="card" data-category="frontend">
+                    <img src="img/picks/iat235-petadoption.png" alt="An image of the Pet Adoption Services project" class="img-project">
+                    <h3>Pet Adoption Services</h3>
+                    <h4>Front-End Developer</h4>
+                    <h4 class="italic">Team Project</h4>
+                    <h5 class="normal italic">December 2025</h5>
+                </a>
+                
+                <!-- 2025/08 - Tap&Go Audio Stick -->
+                <a id="project_iat238_audiostick" href="projects/iat238-audiostick.html" class="card" data-category="uxui">
+                    <img src="img/picks/iat238-audiostick.png" alt="An image of the Tap&Go Audio Stick project" class="img-project">
+                    <h3>Tap&Go Audio Stick</h3>
+                    <h4>Lead Designer</h4>
+                    <h4 class="italic">Team Project</h4>
+                    <h5 class="normal italic">August 2025</h5>
+                </a>
+
+                <!-- 2023/10 - Career Centre Banner -->
+                <a id="project_client-careerbanner" href="projects/client-careerbanner.html" class="card" data-category="uxui">
+                    <img src="img/picks/client-careerbanner.jpg" alt="An image of the Career Centre Banner project" class="img-project">
+                    <h3>Career Centre Banner</h3>
+                    <h4>Designer</h4>
+                    <h4 class="italic">Solo Project</h4>
+                    <h5 class="normal italic">October 2023</h5>
+                </a>
+            </div>
+        </main>
+
+        <footer>
+            <p class="sans">By Luc Bassaler-Merpillat.</p>
+            <p class="sans">© 2018-<script>document.write(/\d{4}/.exec(Date())[0])</script> Owl Dev Inc. All rights reserved.</p>
+            <p class="sans">Established in 2018. Incorporated in Canada in 2021.</p>
+        </footer>
+
+        <script src="js/filter.js"></script>
+        <script src="js/lightbox.js"></script>
+        <script src="js/copypaste.js"></script>
+    </body>
+</html>
