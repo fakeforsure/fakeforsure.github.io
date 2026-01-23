@@ -346,6 +346,7 @@ footer {
 }
 
 .filterlist-filters {
+    font-family: "Outfit", Arial, Verdana, sans-serif !important; /* Does not work :c */
     margin-bottom: 1rem;
 }
 
