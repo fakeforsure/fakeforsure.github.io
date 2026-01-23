@@ -329,11 +329,6 @@ footer {
     margin-bottom: 0.5rem;
 }
 
-.side {
-    margin: 0;
-    width: 100%;
-}
-
 .nav {
     display: inline-block;
     margin: 0 1rem;
@@ -494,12 +489,6 @@ footer {
     }
 }
 
-@media (width > 64rem) {
-    .side {
-        width: 30rem;
-    }
-}
-
 @media (width < 45rem) {
     .figure-article {
         float: none;
@@ -509,17 +498,33 @@ footer {
 }
 
 @media (width > 35rem) {
-    .side {
-        width: 100%;
-    }
-
     .img-title {
         width: 30rem;
     }
 }
 
-@media (width < 35rem) {
-    .side {
-        width: 100%;
+@media (width < 35rem) { /* Should I change this to make smaller earlier? */
+    p, ul, ol, li, a {
+        font-size: 1rem;
+    }
+
+    #nav a {
+        font-size: 1.125rem;
+    }
+
+    figcaption {
+        font-size: 0.75rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3, h4, h5, h6 {
+        font-size: 1.125rem;
     }
 }
