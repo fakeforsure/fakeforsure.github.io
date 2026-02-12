@@ -313,8 +313,7 @@ footer {
 }
 
 .main, .article {
-    margin: 1rem;
-    margin-top: 5rem;
+    margin: 5rem 1rem 1rem 1rem;
     border-radius: 0.9rem;
     background-color: var(--blue);
     padding: 5rem 1rem;
@@ -348,6 +347,10 @@ footer {
 .filterlist-filters {
     font-family: "Outfit", Arial, Verdana, sans-serif !important; /* Does not work :c */
     margin-bottom: 1rem;
+}
+
+.updates { /* This is only for .article class go-along and bypass */
+    margin-top: 0;
 }
 
 
