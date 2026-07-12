@@ -57,6 +57,7 @@ On: December 21, 2025
     --accent-active: var(--brown);
     --accent-gradient: var(--blue_glaze);
     --accent-special: #E8BFBF;
+    --accent-warn: #FED498;
 }
 
 * {
@@ -391,6 +392,12 @@ footer {
     width: 100%;
     object-fit: cover;
     object-position: center center;
+    &.topview {
+        object-position: center 25%;
+    }
+    &.bottomview {
+        object-position: center 75%;
+    }
 }
 
 .figure-article {
@@ -482,6 +489,17 @@ footer {
 
 #filterlist .card {
     transition: all 0.3s ease;
+}
+
+#stub {
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--accent-warn);
+    border-radius: 0.5rem;
+    text-align: center;
+    font-family: "Balsamiq Sans", sans-serif;
+    font-size: 1.2rem;
+    color: var(--brown);
 }
 
 
