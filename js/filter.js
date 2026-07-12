@@ -12,9 +12,10 @@ function filterSkills(evt, category) {
 
     const cards = document.querySelectorAll("#filterlist .card");
     cards.forEach(card => {
+        const categories = card.dataset.category.split(' '); 
         if (category === "all") {
             card.style.display = "block";
-        } else if (card.dataset.category === category) {
+        } else if (categories.includes(category)) {
             card.style.display = "block";
         } else {
             card.style.display = "none";
