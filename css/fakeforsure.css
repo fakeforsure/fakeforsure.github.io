@@ -1,0 +1,241 @@
+/*
+Music CSS - Fakeforsure
+By: Luc Bassaler-Merpillat
+On: August 7, 2026
+*/
+
+/* - SETUP ACROSS PAGES - */
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap');
+
+
+
+/* All */
+:root {
+    /* Brand Colors */
+    --white: #F5F5F5;
+    --light: #F7E9F7;
+    --pink: #DDB1DC;
+    --purple: #4C4578;
+    --dark: #281F41;
+    --black: #0D0D0D;
+}
+
+* {
+    box-sizing: border-box;
+    transition-property: all;
+    transition-duration: 0.2s;
+    z-index: 1; /* Unless otherwise changed */
+    color: var(--white); /* For text, but it can impact other things so watch out */
+    font-family: "Unkempt", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/* Defaults */
+html, body {
+    scroll-behavior: smooth !important;
+    overflow: hidden; /* For now */
+    margin: 0;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+/* Gradient */
+body {
+    background: linear-gradient(30deg, var(--pink), var(--purple), var(--black));
+    /* background: linear-gradient(30deg, var(--purple), var(--dark) 30%, var(--black)); */
+    background-size: 200% 200%;
+    -webkit-animation: gradientAnimation 12s ease infinite;
+    -moz-animation: gradientAnimation 12s ease infinite;
+    animation: gradientAnimation 12s ease infinite;
+}
+
+@-webkit-keyframes gradientAnimation {
+    0% { background-position: 30% 0%; }
+    50% { background-position: 98% 100%; }
+    100% { background-position: 30% 0%; }
+}
+
+@-moz-keyframes gradientAnimation {
+    0% { background-position: 30% 0%; }
+    50% { background-position: 98% 100%; }
+    100% { background-position: 30% 0%; }
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 30% 0%; }
+    50% { background-position: 98% 100%; }
+    100% { background-position: 30% 0%; }
+}
+
+
+
+/* Images */
+.playarea {
+    z-index: 99; /* On top of everything else to pause and play */
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+}
+
+svg {
+    color : var(--white);
+}
+
+.svg {
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+}
+
+.logo {
+    width: 3.5rem;
+    height: auto;
+    position: fixed;
+    bottom: 1rem;
+
+    &.left {
+        object-position: left;
+        left: 1rem;
+    }
+    &.right {
+        object-position: right;
+        right: 1rem;
+    }
+}
+
+.star {
+    /* background: red; */
+    margin-top: 4rem;
+}
+
+#solarsystem {
+    display: block;
+    position: fixed;
+    left: 1.5rem;
+    top: 1.5rem;
+    width: 10rem;
+    height: auto;
+}
+
+.date {
+    display: block;
+    position: fixed;
+    top: 6rem;
+    left: 7rem;
+    font-size: 1rem;
+}
+
+#silas {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(90vw, 90vh);
+    height: min(90vw, 90vh);
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+}
+
+.socials {
+    display: block;
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    img {
+        margin: 0 0.25rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+
+@media (width > 1111px) {
+    body {
+        background: linear-gradient(30deg, var(--pink), var(--purple), var(--black));
+        /* background: linear-gradient(30deg, var(--purple), var(--dark) 30%, var(--black)); */
+        background-size: 200% 200%;
+        -webkit-animation: gradientAnimation 8s ease infinite;
+        -moz-animation: gradientAnimation 8s ease infinite;
+        animation: gradientAnimation 8s ease infinite;
+    }
+
+    @-webkit-keyframes gradientAnimation {
+        0% { background-position: 97% 0%; }
+        50% { background-position: 98% 100%; }
+        100% { background-position: 97% 0%; }
+    }
+
+    @-moz-keyframes gradientAnimation {
+        0% { background-position: 97% 0%; }
+        50% { background-position: 98% 100%; }
+        100% { background-position: 97% 0%; }
+    }
+
+    @keyframes gradientAnimation {
+        0% { background-position: 97% 0%; }
+        50% { background-position: 98% 100%; }
+        100% { background-position: 97% 0%; }
+    }
+}
+
+@media (width > 850px) {
+    #solarsystem {
+        width: 20rem;
+    }
+
+    .socials {
+        img {
+            margin: 0 0.75rem;
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    .date {
+        display: block;
+        position: fixed;
+        top: 11rem;
+        left: 12rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (width < 500px) {
+    #silas {
+        width: min(125vw, 125vh);
+        height: min(125vw, 125vh);
+        max-width: 125vw;
+        max-height: 125vh;
+    }
+}
+
+@media (width < 360px) {
+    .socials {
+        left: 50%;
+        bottom: 5rem;
+
+        img {
+            margin: 0 0.25rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+}

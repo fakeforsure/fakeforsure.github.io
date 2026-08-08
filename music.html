@@ -1,0 +1,93 @@
+<!-- 
+Music HTML - Fakeforsure
+By: Luc Bassaler-Merpillat
+On: August 7, 2026
+
+Note: This page is not for the portfolio, but rather for my online identity and music.
+-->
+
+<!DOCTYPE html>
+<html lang="en-CA">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="canonical" href="https://www.owldev.ca/music"/>
+
+        <!-- Metadata -->
+        <meta name="author" content="Fakeforsure">
+        <meta name="title" content="Fakeforsure">
+        <meta name="description" content="Canadian-French composer Luc, codenamed Fakeforsure, is a young artist exploring chill electronic music, notably synthwave, lo-fi, and chill beats.">
+        <meta name="theme-color" content="#4C4578"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://www.owldev.ca/music"/>
+        <meta property="og:title" content="Fakeforsure"/>
+        <meta property="og:description" content="Canadian-French composer Luc, codenamed Fakeforsure, is a young artist exploring chill electronic music, notably synthwave, lo-fi, and chill beats."/>
+        <meta property="og:image" content="img/fakeforsure/logo.png"/>
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://www.owldev.ca/music"/>
+        <meta property="twitter:title" content="Fakeforsure"/>
+        <meta property="twitter:description" content="Canadian-French composer Luc, codenamed Fakeforsure, is a young artist exploring chill electronic music, notably synthwave, lo-fi, and chill beats."/>
+        <meta property="twitter:image" content="img/fakeforsure/logo.png"/>
+
+        <!-- Title -->
+        <title>fakeforsure</title>
+        <link id="icon" rel="icon" href="img/fakeforsure/icon.png">
+        <link rel="stylesheet" href="css/fakeforsure.css">
+    </head>
+
+    <body>
+        <div id="top"></div>
+
+        <main class="main">
+            <!-- Section: in the center, giant play button that plays my music -->
+            <section class="playarea">
+                <svg aria-hidden="true" class="svg" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-player-play">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <!-- <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" /> --> 
+                    <path d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" />
+	                <path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" />
+                </svg>
+                <audio autoplay id="audio" loop="true">
+                    <source src="img/fakeforsure/venus.wav" type="audio/wav">
+                </audio>
+            </section>
+
+
+            <!-- Section: Silas floating in the dead center -->
+            <section class="star">
+                <img src="img/fakeforsure/solarsystem.png" alt="Logo of the Solar System album" id="solarsystem">
+                <p class="date">09/07/26</p>
+                <img src="img/fakeforsure/silas.png" alt="Silas, aka Star Boy, the main character featured on Fakeforsure's cover arts" id="silas">
+            </section>
+
+            <!-- Section: at bottom -->
+            <section class="bottom">
+
+                <!-- Div: on the left, fakeforsure icon; on the right, wildfireclan_white icon -->
+                <div>
+                    <img src="img/fakeforsure/icon.png" alt="The logo of Fakeforsure" class="logo left">
+                    <img src="img/fakeforsure/wildfireclan_white.png" alt="The logo of WILDFIRECLAN" class="logo right">
+                </div>
+
+                <!-- Div: on the middle, youtube + spotify + instagram icons -->
+                <div class="socials">
+                    <a href="https://www.youtube.com/@fakeforsure" target="_blank" rel="noopener noreferrer"><img src="img/fakeforsure/youtube.png" alt="The logo of YouTube"></a>
+                    <a href="https://open.spotify.com/artist/3tWmVZJQp6it8FgRb01UfN" target="_blank" rel="noopener noreferrer"><img src="img/fakeforsure/spotify.png" alt="The logo of Spotify"></a>
+                    <a href="https://music.apple.com/us/artist/fakeforsure/1557242055" target="_blank" rel="noopener noreferrer"><img src="img/fakeforsure/apple.png" alt="The logo of Apple"></a>
+                </div>
+
+                <!-- Div: on the middle, a down arrow with a text above reading "about me" -->
+                <div>
+
+                </div>
+            </section>
+
+            <!-- Section: below viewable area, section for body and text and what not -->
+            <section class="about">
+                
+            </section>
+        </main>
+
+        <script src="js/playmusic.js"></script>
+    </body>
+</html>
