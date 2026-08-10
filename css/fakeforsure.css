@@ -162,8 +162,12 @@ svg {
     left: 50%;
     transform: translateX(-50%);
 
-    img {
+    a {
         margin: 0 0.25rem;
+    }
+
+    a, img {
+        display: inline-block;
         width: 2.5rem;
         height: 2.5rem;
     }
@@ -205,8 +209,11 @@ svg {
     }
 
     .socials {
-        img {
+        a {
             margin: 0 0.75rem;
+        }
+
+        a, img {
             width: 3rem;
             height: 3rem;
         }
@@ -239,8 +246,11 @@ svg {
         left: 50%;
         bottom: 5rem;
 
-        img {
+        a {
             margin: 0 0.25rem;
+        }
+
+        a, img {
             width: 1.5rem;
             height: 1.5rem;
         }
