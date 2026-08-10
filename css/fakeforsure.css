@@ -78,7 +78,7 @@ body {
 
 /* Images */
 .playarea {
-    z-index: 99; /* On top of everything else to pause and play */
+    z-index: 99; /* On top of everything else to pause and play (99) */
     display: block;
     position: fixed;
     top: 1rem;
@@ -122,23 +122,26 @@ svg {
 }
 
 #solarsystem {
+    z-index: 88; /* Second top of specific section (87-88-89) */
     display: block;
     position: fixed;
     left: 1.5rem;
-    top: 1.5rem;
+    top: 0;
     width: 10rem;
     height: auto;
 }
 
 .date {
+    z-index: 87; /* Third top of specific section (87-88-89) */
     display: block;
     position: fixed;
-    top: 6rem;
+    top: 4.5rem;
     left: 7rem;
     font-size: 1rem;
 }
 
 #silas {
+    z-index: 89; /* First top of specific section (87-88-89) */
     display: block;
     position: fixed;
     top: 50%;
@@ -212,18 +215,22 @@ svg {
     .date {
         display: block;
         position: fixed;
-        top: 11rem;
+        top: 9rem;
         left: 12rem;
         font-size: 1.5rem;
+    }
+
+    .logo {
+        width: 5rem;
     }
 }
 
 @media (width < 500px) {
     #silas {
-        width: min(125vw, 125vh);
-        height: min(125vw, 125vh);
-        max-width: 125vw;
-        max-height: 125vh;
+        width: min(105vw, 105vh);
+        height: min(105vw, 105vh);
+        max-width: 105vw;
+        max-height: 105vh;
     }
 }
 
