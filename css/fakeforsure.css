@@ -23,7 +23,7 @@ On: August 7, 2026
 
 * {
     box-sizing: border-box;
-    transition-property: all;
+    transition-property: all ease;
     transition-duration: 0.2s;
     z-index: 1; /* Unless otherwise changed */
     color: var(--white); /* For text, but it can impact other things so watch out */
@@ -122,7 +122,7 @@ svg {
 }
 
 #solarsystem {
-    z-index: 88; /* Second top of specific section (87-88-89) */
+    z-index: 88; /* Second top of specific section (87-88-89-90) */
     display: block;
     position: fixed;
     left: 1.5rem;
@@ -132,7 +132,7 @@ svg {
 }
 
 .date {
-    z-index: 87; /* Third top of specific section (87-88-89) */
+    z-index: 87; /* Third top of specific section (87-88-89-90) */
     display: block;
     position: fixed;
     top: 4.5rem;
@@ -141,7 +141,7 @@ svg {
 }
 
 #silas {
-    z-index: 89; /* First top of specific section (87-88-89) */
+    z-index: 89; /* First top of specific section (87-88-89-90) */
     display: block;
     position: fixed;
     top: 50%;
@@ -156,6 +156,7 @@ svg {
 }
 
 .socials {
+    z-index: 98; /* On top of ALMOST everything else (98) */
     display: block;
     position: fixed;
     bottom: 1rem;
@@ -172,6 +173,40 @@ svg {
         height: 2.5rem;
     }
 }
+
+.button {
+    z-index: 90; /* First top of specific section (87-88-89-90) */
+    display: block;
+    position: fixed;
+    font-size: 1.25rem;
+    left: 4.5rem;
+    top: 8rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--white);
+    color: var(--black);
+    text-decoration: none;
+    text-align: left;
+    border-radius: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, svg:hover, .socials a:hover,
+.button:focus, svg:focus, .socials a:focus {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+svg:hover, #social1:hover, #social2:hover, #social3:hover,
+svg:focus, #social1:focus, #social2:focus, #social3:focus {
+    border-radius: 1.5rem;
+}
+
+#social1:hover,
+#social1:focus {
+    border-radius: 0.5rem;
+}
+
 
 
 @media (width > 1111px) {
@@ -230,6 +265,21 @@ svg {
     .logo {
         width: 5rem;
     }
+
+    .button {
+        font-size: 2rem;
+        left: 7.5rem;
+        top: 13.5rem;
+    }
+}
+
+@media (width < 675px) {
+    .button {
+        font-size: 1rem;
+        left: auto;
+        right: 2rem;
+        top: 2.5rem;
+    }
 }
 
 @media (width < 500px) {
@@ -254,5 +304,14 @@ svg {
             width: 1.5rem;
             height: 1.5rem;
         }
+    }
+
+    .button {
+        font-size: 1rem;
+        text-align: center;
+        left: 30%;
+        bottom: 7.5rem;
+        right: 30%;
+        top: auto;
     }
 }
