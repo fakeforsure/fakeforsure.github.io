@@ -33,7 +33,15 @@ var activeSvg = `
 	        <path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" />
             `.trim();
 
+svg.setAttribute('tabindex', '0');
+
 svg.addEventListener('click', () => {
     play();
 });
 
+svg.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        play();
+    }
+});
