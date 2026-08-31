@@ -58,6 +58,14 @@ On: December 21, 2025
     --accent-gradient: var(--blue_glaze);
     --accent-special: #E8BFBF;
     --accent-warn: #FED498;
+
+    /* Fakeforsure Brand Colors */
+    --ffs-white: #F5F5F5;
+    --ffs-light: #F7E9F7;
+    --ffs-pink: #DDB1DC;
+    --ffs-purple: #4C4578;
+    --ffs-dark: #281F41;
+    --ffs-black: #0D0D0D;
 }
 
 * {
