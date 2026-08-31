@@ -268,6 +268,45 @@ img{
     color: var(--main-white);
 }
 
+#musicTab {
+    color: var(--ffs-white);
+    background: linear-gradient(30deg, var(--ffs-pink), var(--ffs-purple), var(--ffs-dark));
+    background-size: 150% 100%;
+    -webkit-animation: gradientAnimation 5s ease infinite;
+    -moz-animation: gradientAnimation 5s ease infinite;
+    animation: gradientAnimation 5s ease infinite;
+}
+
+@-webkit-keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+    100% { background-position: 0% 0%; }
+}
+
+@-moz-keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+    100% { background-position: 0% 0%; }
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+    100% { background-position: 0% 0%; }
+}
+
+#musicTab:hover {
+    cursor: alias;
+    color: var(--ffs-pink);
+    border-bottom: 2px solid var(--ffs-purple);
+}
+
+#musicTab:focus {
+    border-bottom: 4px solid var(--ffs-purple);
+    background-color: var(--ffs-dark);
+    color: var(--ffs-white);
+}
+
 
 
 /* Button Elements */
