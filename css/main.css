@@ -219,30 +219,30 @@ img{
     font-size: 1.5rem;
     color: var(--accent-text);
     border-bottom: 2px solid var(--accent-border);
-}
 
-.picker:hover {
-    color: var(--accent-highlight);
-    border-bottom: 2px solid var(--accent-highlight);
-}
+    &:hover {
+        color: var(--accent-highlight);
+        border-bottom: 2px solid var(--accent-highlight);
+    }
 
-.picker:focus {
-    /* color: var(--accent-highlight); */
-    border-bottom: 4px solid var(--accent-highlight);
-    background-color: var(--main-gray);
-    color: var(--main-white);
-}
+    &:focus {
+        /* color: var(--accent-highlight); */
+        border-bottom: 4px solid var(--accent-highlight);
+        background-color: var(--main-gray);
+        color: var(--main-white);
+    }
 
-.picker.active, 
-.picker.active:hover {
-    color: var(--accent-active);
-    border-bottom: 2px solid var(--accent-active);
-}
+    &.active, 
+    &.active:hover {
+        color: var(--accent-active);
+        border-bottom: 2px solid var(--accent-active);
+    }
 
-.picker.active:focus {
-    border-bottom: 4px solid var(--accent-active);
-    background-color: var(--main-gray);
-    color: var(--main-white);
+    &.active:focus {
+        border-bottom: 4px solid var(--accent-active);
+        background-color: var(--main-gray);
+        color: var(--main-white);
+    }
 }
 
 .tablinks {
@@ -254,18 +254,18 @@ img{
     cursor: pointer;
     padding: 0.75rem 1rem;
     font-size: 1.1rem;
-}
 
-.tablinks.active,
-.tablinks:hover {
-    color: var(--accent-active);
-    border: 2px solid var(--accent-active);
-}
+    &:hover,
+    &.active {
+        color: var(--accent-active);
+        border: 2px solid var(--accent-active);
+    }
 
-.tablinks:focus,
-.tablinks.active:focus {
-    background-color: var(--main-gray);
-    color: var(--main-white);
+    &:focus,
+    &.active:focus {
+        background-color: var(--main-gray);
+        color: var(--main-white);
+    }
 }
 
 #musicTab {
@@ -275,6 +275,18 @@ img{
     -webkit-animation: gradientAnimation 5s ease infinite;
     -moz-animation: gradientAnimation 5s ease infinite;
     animation: gradientAnimation 5s ease infinite;
+
+    &:hover {
+        cursor: alias;
+        color: var(--ffs-pink);
+        border-bottom: 2px solid var(--ffs-purple);
+    }
+
+    &:focus {
+        border-bottom: 4px solid var(--ffs-purple);
+        background-color: var(--ffs-dark);
+        color: var(--ffs-white);
+    }
 }
 
 @-webkit-keyframes gradientAnimation {
@@ -295,18 +307,6 @@ img{
     100% { background-position: 0% 0%; }
 }
 
-#musicTab:hover {
-    cursor: alias;
-    color: var(--ffs-pink);
-    border-bottom: 2px solid var(--ffs-purple);
-}
-
-#musicTab:focus {
-    border-bottom: 4px solid var(--ffs-purple);
-    background-color: var(--ffs-dark);
-    color: var(--ffs-white);
-}
-
 
 
 /* Button Elements */
@@ -318,21 +318,21 @@ img{
     font-size: 1.1rem;
     background-color: var(--accent-highlight);
     color: var(--main-black);
-}
 
-.button:hover {
+    &:hover {
     background-color: var(--main-white);
     color: var(--brown);
-}
+    }
 
-.button:focus {
-    background-color: var(--main-gray);
-    color: var(--main-white);
-}
+    &:focus {
+        background-color: var(--main-gray);
+        color: var(--main-white);
+    }
 
-.contact-buttons {
-    display: inline-block;
-    margin: 0.2rem 0;
+    &.contact-buttons {
+        display: inline-block;
+        margin: 0.2rem 0;
+    }
 }
 
 #return {
@@ -410,20 +410,20 @@ footer {
     background: linear-gradient(to bottom right, var(--accent-card) 0%, var(--accent-gradient) 70%);
     border: 2px solid var(--accent-border);
     box-shadow: 0 0.1rem 0 rgba(0,0,0,0.01) inset, 0 0.5rem 0.5rem rgba(255,255,255,0.05);
-}
+    
+    &:hover {
+        border: 2px solid var(--accent-text);
+    }
 
-.card:hover {
-    border: 2px solid var(--accent-text);
-}
+    &:focus {
+        border: 2px solid var(--accent-text);
+    }
 
-.card:focus {
-    border: 2px solid var(--accent-text);
-}
-
-.card.no_link:focus,
-.card.no_link:hover {
-    background: linear-gradient(to bottom right, var(--accent-card) 0%, var(--accent-special) 70%);
-    border: 2px solid var(--accent-text_flip);
+    &.no_link:focus,
+    .card.no_link:hover {
+        background: linear-gradient(to bottom right, var(--accent-card) 0%, var(--accent-special) 70%);
+        border: 2px solid var(--accent-text_flip);
+    }
 }
 
 
