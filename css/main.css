@@ -316,8 +316,8 @@ img{
     border-radius: 0.9rem;
     padding: 0.4rem 1rem;
     font-size: 1.1rem;
-    background-color: var(--accent-highlight);
-    color: var(--main-black);
+    background-color: var(--brown);
+    color: var(--main-white);
 
     &:hover {
     background-color: var(--main-white);
@@ -332,6 +332,14 @@ img{
     &.contact-buttons {
         display: inline-block;
         margin: 0.2rem 0;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+
+        &::after {
+            content: " ⧉";
+            flex: 0 0 auto;
+        }
     }
 }
 
@@ -388,8 +396,16 @@ footer {
 }
 
 .location {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
     margin-top: 0.25rem;
-    grid-template-columns: 1fr;
+
+    &::after {
+        content: "🡥";
+        flex: 0 0 auto;
+    }
 }
 
 .filterlist-filters {
@@ -409,20 +425,37 @@ footer {
     padding: 1rem 0.5rem;
     background: linear-gradient(to bottom right, var(--accent-card) 0%, var(--accent-gradient) 70%);
     border: 2px solid var(--accent-border);
-    box-shadow: 0 0.1rem 0 rgba(0,0,0,0.01) inset, 0 0.5rem 0.5rem rgba(255,255,255,0.05);
-    
-    &:hover {
-        border: 2px solid var(--accent-text);
-    }
+    box-shadow: 0 0.1rem 0 rgba(0, 0, 0, 0.01) inset, 0 0.5rem 0.5rem rgba(255, 255, 255, 0.05);
 
+    &:hover,
     &:focus {
-        border: 2px solid var(--accent-text);
+        border-color: var(--accent-text);
     }
 
-    &.no_link:focus,
-    .card.no_link:hover {
+    &.no_link:hover,
+    &.no_link:focus {
         background: linear-gradient(to bottom right, var(--accent-card) 0%, var(--accent-special) 70%);
-        border: 2px solid var(--accent-text_flip);
+        border-color: var(--accent-text_flip);
+    }
+
+    h5 {
+        display: flex;
+        justify-content: space-between;
+
+        &::after {
+            flex: 0 0 auto;
+            font-style: normal;
+            color: var(--accent-text);
+            content: "↩"; /* Default */
+        }
+    }
+
+    &.out_link h5::after {
+        content: "🡥";
+    }
+
+    &.no_link h5::after {
+        content: "X";
     }
 }
 
