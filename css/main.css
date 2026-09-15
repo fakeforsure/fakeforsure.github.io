@@ -439,12 +439,6 @@ footer {
     width: 100%;
     object-fit: cover;
     object-position: center center;
-    &.topview {
-        object-position: center 25%;
-    }
-    &.bottomview {
-        object-position: center 75%;
-    }
 }
 
 .figure-article {
@@ -459,6 +453,32 @@ footer {
     height: auto;
 }
 
+#carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    height: 20rem;
+}
+
+#carousel img {
+    width: 100%;
+    height: 24rem;
+    object-fit: cover;
+    /* object-position: center center; */
+}
+
+.topview { /* ALWAYS ON TOP Top view of image */
+    object-position: center 25%;
+}
+
+.centerview { /* ALWAYS ON TOP Center view of image */
+    object-position: center center;
+}
+
+.bottomview { /* ALWAYS ON TOP Bottom view of image */
+    object-position: center 75%;
+}
+
 
 
 /* Content */
@@ -471,20 +491,6 @@ footer {
     gap: 1rem;
     grid-template-columns: 0.65fr 1fr;
     display: grid;
-}
-
-#carousel {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    height: 20rem;
-}
-
-#carousel img {
-    width: 100%;
-    height: 24rem;
-    object-fit: cover;
-    object-position: center center;
 }
 
 .marking {
