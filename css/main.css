@@ -574,13 +574,13 @@ footer {
 
 
 /* Any other @media */
-@media (width < 68rem) {
+@media (width < 1080px) {
     .content_about {
         display: inline-block;
     }
 }
 
-@media (width < 45rem) {
+@media (width < 720px) {
     .figure-article {
         float: none;
         width: 100%;
@@ -588,13 +588,18 @@ footer {
     }
 }
 
-@media (width > 35rem) {
+@media (width > 560px) {
     .img-title {
         width: 30rem;
     }
 }
 
-@media (width < 35rem) { /* Should I change this to make smaller earlier? */
+@media (width < 500px) { /* Should I change this to make smaller earlier? */
+    /* The fixed navigation can wrap onto a second line on small phones. */
+    .main, .article {
+        margin-top: 8rem;
+    }
+
     p, ul, ol, li, a {
         font-size: 1rem;
     }
