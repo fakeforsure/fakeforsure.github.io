@@ -126,6 +126,10 @@ p, ul, ol, li, a {
 figcaption {
     color: var(--accent-text);
     font-family: "Outfit", Arial, Verdana, sans-serif;
+    font-size: 1rem;
+    a {
+        font-size: 1rem;
+    }
 }
 
 ol,
@@ -594,7 +598,7 @@ footer {
     }
 }
 
-@media (width < 500px) { /* Should I change this to make smaller earlier? */
+@media (width < 560px) { /* Should I change this to make smaller earlier? */
     /* The fixed navigation can wrap onto a second line on small phones. */
     .main, .article {
         margin-top: 8rem;
@@ -610,6 +614,9 @@ footer {
 
     figcaption {
         font-size: 0.75rem;
+        a {
+            font-size: 0.75rem;
+        }
     }
 
     h1 {
