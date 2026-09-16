@@ -625,7 +625,8 @@ footer {
         /* Brand Colors */
         --orange: #990301;
         --brown: #99D9EA;
-        --pink: var(--main-gray);
+        /* --pink: var(--main-gray); */
+        --pink: #313131;
         --blue: var(--main-black);
 
         /* NEW Accent Colors */
@@ -640,7 +641,6 @@ footer {
         --accent-active: var(--brown);
         --accent-gradient: var(--blue_black);
         --accent-special: #180D11;
-        --accent-warn: var(--main-gray);
     }
 
     .button {
@@ -655,7 +655,7 @@ footer {
     }
 
     .marking {
-        background-color: var(--main-gray);
+        background-color: var(--pink);
         color: var(--main-white);
     }
 
@@ -679,5 +679,10 @@ footer {
             background-color: var(--main-gray);
             color: var(--main-white);
         }
+    }
+
+    #stub {
+        background-color: var(--accent-special);
+        color: var(--accent-warn);
     }
 }
