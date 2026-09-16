@@ -37,31 +37,31 @@ On: December 12, 2025
         <div id="top"></div>
 
         <nav id="nav" class="nav">
-            <a tabindex="2" href="index.html" class="picker" id="homeTab">Home</a>
+            <a tabindex="1" href="index.html" class="picker" id="homeTab">Home</a>
             <a tabindex="2" href="projects.html" class="picker" id="projectsTab">Projects</a>
-            <a tabindex="2" href="skills.html" class="picker active" id="skillsTab">Skills</a>
-            <a tabindex="1" href="music.html" class="picker" id="musicTab">Music</a>
+            <a tabindex="3" href="skills.html" class="picker active" id="skillsTab">Skills</a>
+            <a tabindex="4" href="music.html" class="picker" id="musicTab">Music</a>
         </nav>
 
         <main class="main grid main-grid">
             <section class="section content_intro">
                 <img src="img/owl/head+bg.png" alt="The logo of Owl Dev" class="img-title zoomable">
                 <h1><mark>Luc's Skills</mark></h1>
-                <a tabindex="1" id="copyEmail" class="button contact-buttons">Co-op Contact Info: <em class="normal bold">lpb3@sfu.ca</em></a>
+                <a tabindex="10" id="copyEmail" class="button contact-buttons">Co-op Contact Info: <em class="normal bold">lpb3@sfu.ca</em></a>
             </section>
 
             <div class="filterlist-filters">
-                <button tabindex="0" class="tablinks active" onclick="filterSkills(event, 'all')">All</button>
-                <button tabindex="0" class="tablinks" onclick="filterSkills(event, 'frontend')">Front-End Development</button>
-                <button tabindex="0" class="tablinks" onclick="filterSkills(event, 'uxui')">UX/UI Design</button>
-                <button tabindex="0" class="tablinks" onclick="filterSkills(event, 'sound')">Visual and Audio Control</button>
+                <button tabindex="20" class="tablinks active" onclick="filterSkills(event, 'all')">All</button>
+                <button tabindex="21" class="tablinks" onclick="filterSkills(event, 'frontend')">Front-End Development</button>
+                <button tabindex="22" class="tablinks" onclick="filterSkills(event, 'uxui')">UX/UI Design</button>
+                <button tabindex="23" class="tablinks" onclick="filterSkills(event, 'sound')">Visual and Audio Control</button>
             </div>
 
             <div id="filterlist" class="tabcontent grid card-grid skills">
                 <!-- NOTE: each <a> represents a project card, spaces to separate, BY DATE -->
                 
                 <!-- Skill - Figma -->
-                <a id="skill_figma" href="projects/iat238-audiostick.html" class="card" data-category="uxui">
+                <a tabindex="30" id="skill_figma" href="projects/iat238-audiostick.html" class="card" data-category="uxui">
                     <img src="img/thumbs/figma.png" alt="Logo of Figma" class="img-project">
                     <h3>Figma</h3>
                     <h4><br></h4>
@@ -70,7 +70,7 @@ On: December 12, 2025
                 </a>
 
                 <!-- Skill - HTML -->
-                <a id="skill_html" href="projects/iat235-petadoption.html" class="card" data-category="frontend">
+                <a tabindex="31" id="skill_html" href="projects/iat235-petadoption.html" class="card" data-category="frontend">
                     <img src="img/thumbs/html.png" alt="Logo of HTML" class="img-project">
                     <h3>HTML</h3>
                     <h4><br></h4>
@@ -79,7 +79,7 @@ On: December 12, 2025
                 </a>
 
                 <!-- Skill - CSS -->
-                <a id="skill_css" href="projects/iat235-petadoption.html" class="card" data-category="frontend">
+                <a tabindex="32" id="skill_css" href="projects/iat235-petadoption.html" class="card" data-category="frontend">
                     <img src="img/thumbs/css.png" alt="Logo of CSS" class="img-project">
                     <h3>CSS</h3>
                     <h4><br></h4>
@@ -88,7 +88,7 @@ On: December 12, 2025
                 </a>
 
                 <!-- Skill - Lawo -->
-                <a id="skill_lawo" href="projects/iat271-hbsccrassistant.html" class="card" data-category="sound">
+                <a tabindex="33" id="skill_lawo" href="projects/iat271-hbsccrassistant.html" class="card" data-category="sound">
                     <img src="img/thumbs/lawo.png" alt="Logo of Lawo" class="img-project">
                     <h3>Lawo</h3>
                     <h4>Lawo Commentary Unit</h4>
@@ -97,7 +97,7 @@ On: December 12, 2025
                 </a>
 
                 <!-- Skill - Photoshop -->
-                <a id="skill_photoshop" href="https://www.sfu.ca/siat/showcase/fall-2024-project-showcase/iat-100-film-stills---cowboy.html" target="_blank" class="card out_link" data-category="uxui">
+                <a tabindex="34" id="skill_photoshop" href="https://www.sfu.ca/siat/showcase/fall-2024-project-showcase/iat-100-film-stills---cowboy.html" target="_blank" class="card out_link" data-category="uxui">
                     <img src="img/thumbs/photoshop.png" alt="Logo of Photoshop" class="img-project">
                     <h3>Photoshop</h3>
                     <h4><br></h4>
@@ -106,7 +106,7 @@ On: December 12, 2025
                 </a>
 
                 <!-- Skill - InDesign -->
-                <a id="skill_indesign" class="card no_link" data-category="uxui">
+                <a tabindex="35" id="skill_indesign" class="card no_link" data-category="uxui">
                     <img src="img/thumbs/indesign.png" alt="Logo of InDesign" class="img-project">
                     <h3>InDesign</h3>
                     <h4><br></h4>
@@ -115,7 +115,7 @@ On: December 12, 2025
                 </a>
 
                 <!-- Skill - After Effects -->
-                <a id="skill_aftereffects" class="card no_link" data-category="uxui sound">
+                <a tabindex="36" id="skill_aftereffects" class="card no_link" data-category="uxui sound">
                     <img src="img/thumbs/aftereffects.png" alt="Logo of After Effects" class="img-project">
                     <h3>After Effects</h3>
                     <h4><br></h4>
@@ -124,7 +124,7 @@ On: December 12, 2025
                 </a>
 
                 <!-- Skill - Premiere Pro -->
-                <a id="skill_premierepro" class="card no_link" data-category="uxui sound">
+                <a tabindex="37" id="skill_premierepro" class="card no_link" data-category="uxui sound">
                     <img src="img/thumbs/premierepro.png" alt="Logo of Premiere Pro" class="img-project">
                     <h3>Premiere Pro</h3>
                     <h4><br></h4>
@@ -133,7 +133,7 @@ On: December 12, 2025
                 </a>
 
                 <!-- Skill - Framer -->
-                <a id="skill_framer" class="card no_link" data-category="uxui">
+                <a tabindex="38" id="skill_framer" class="card no_link" data-category="uxui">
                     <img src="img/thumbs/framer.png" alt="Logo of Framer" class="img-project">
                     <h3>Framer</h3>
                     <h4><br></h4>
@@ -142,7 +142,7 @@ On: December 12, 2025
                 </a>
 
                 <!-- Skill - Roblox -->
-                <a id="skill_roblox" href="https://create.roblox.com/talent/creators/858808662" target="_blank" class="card out_link" data-category="frontend">
+                <a tabindex="39" id="skill_roblox" href="https://create.roblox.com/talent/creators/858808662" target="_blank" class="card out_link" data-category="frontend">
                     <img src="img/thumbs/roblox.png" alt="My Roblox talent page" class="img-project">
                     <h3>Roblox</h3>
                     <h4>Roblox Studio (Luau)</h4>
@@ -151,7 +151,7 @@ On: December 12, 2025
                 </a>
 
                 <!-- Skill - Java Processing -->
-                <a id="skill_javaprocessing" href="https://www.youtube.com/watch?v=vmnQH7nTMI0&t=147s" target="_blank" class="card out_link" data-category="frontend">
+                <a tabindex="40" id="skill_javaprocessing" href="https://www.youtube.com/watch?v=vmnQH7nTMI0&t=147s" target="_blank" class="card out_link" data-category="frontend">
                     <img src="img/thumbs/javaprocessing.png" alt="My YouTube video of Processing final project" class="img-project">
                     <h3>Java Processing</h3>
                     <h4><br></h4>
@@ -160,7 +160,7 @@ On: December 12, 2025
                 </a>
 
                 <!-- Skill - Java -->
-                <a id="skill_java" class="card no_link" data-category="frontend">
+                <a tabindex="41" id="skill_java" class="card no_link" data-category="frontend">
                     <img src="img/thumbs/java.png" alt="Logo of Java" class="img-project">
                     <h3>Java</h3>
                     <h4><br></h4>
@@ -169,7 +169,7 @@ On: December 12, 2025
                 </a>
 
                 <!-- Skill - Python -->
-                <a id="skill_python" class="card no_link" data-category="frontend">
+                <a tabindex="42" id="skill_python" class="card no_link" data-category="frontend">
                     <img src="img/thumbs/python.png" alt="Logo of Python" class="img-project">
                     <h3>Python</h3>
                     <h4><br></h4>
@@ -185,8 +185,6 @@ On: December 12, 2025
             <p class="sans">Established in 2018. Incorporated in Canada in 2021.</p>
         </footer>
 
-        <script src="js/filter.js"></script>
-        <script src="js/lightbox.js"></script>
-        <script src="js/copypaste.js"></script>
+        <script src="js/user.js"></script>
     </body>
 </html>

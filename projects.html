@@ -38,30 +38,30 @@ On: January 22, 2026
 
         <nav id="nav" class="nav">
             <a tabindex="1" href="index.html" class="picker" id="homeTab">Home</a>
-            <a tabindex="1" href="projects.html" class="picker active" id="projectsTab">Projects</a>
-            <a tabindex="1" href="skills.html" class="picker" id="skillsTab">Skills</a>
-            <a tabindex="1" href="music.html" class="picker" id="musicTab">Music</a>
+            <a tabindex="2" href="projects.html" class="picker active" id="projectsTab">Projects</a>
+            <a tabindex="3" href="skills.html" class="picker" id="skillsTab">Skills</a>
+            <a tabindex="4" href="music.html" class="picker" id="musicTab">Music</a>
         </nav>
 
         <main class="main grid main-grid">
             <section class="section content_intro">
                 <img src="img/owl/head+bg.png" alt="The logo of Owl Dev" class="img-title zoomable">
                 <h1><mark>Luc's Projects</mark></h1>
-                <a  tabindex="0" id="copyEmail" class="button contact-buttons">Co-op Contact Info: <em class="normal bold">lpb3@sfu.ca</em></a>
+                <a  tabindex="10" id="copyEmail" class="button contact-buttons">Co-op Contact Info: <em class="normal bold">lpb3@sfu.ca</em></a>
             </section>
 
             <div class="filterlist-filters">
-                <button tabindex="0" class="tablinks active" onclick="filterSkills(event, 'all')">All</button>
-                <button tabindex="0" class="tablinks" onclick="filterSkills(event, 'frontend')">Front-End Development</button>
-                <button tabindex="0" class="tablinks" onclick="filterSkills(event, 'uxui')">UX/UI Design</button>
-                <button tabindex="0" class="tablinks" onclick="filterSkills(event, 'sound')">Visual and Audio Control</button>
+                <button tabindex="20" class="tablinks active" onclick="filterSkills(event, 'all')">All</button>
+                <button tabindex="21" class="tablinks" onclick="filterSkills(event, 'frontend')">Front-End Development</button>
+                <button tabindex="22" class="tablinks" onclick="filterSkills(event, 'uxui')">UX/UI Design</button>
+                <button tabindex="23" class="tablinks" onclick="filterSkills(event, 'sound')">Visual and Audio Control</button>
             </div>
 
             <div id="filterlist" class="tabcontent grid card-grid projects">
                 <!-- NOTE: each <a> represents a project card, spaces to separate, BY DATE -->
                 
                 <!-- 2026/06 - FIFA HBS CCR Assistant -->
-                <a id="project_iat271_hbsccrassistant" href="projects/iat271-hbsccrassistant.html" class="card" data-category="sound">
+                <a tabindex="30"  id="project_iat271_hbsccrassistant" href="projects/iat271-hbsccrassistant.html" class="card" data-category="sound">
                     <img src="img/picks/iat271-hbsccrassistant.jpg" alt="An image of a manager handing out a work certification" class="img-project topview">
                     <h3>FIFA HBS CCR Assistant</h3>
                     <h4>Visual and Audio Control</h4>
@@ -70,7 +70,7 @@ On: January 22, 2026
                 </a>
                 
                     <!-- 2025/12 - Pet Adoption Services -->
-                <a id="project_iat235_petadoption" href="projects/iat235-petadoption.html" class="card" data-category="frontend">
+                <a tabindex="31" id="project_iat235_petadoption" href="projects/iat235-petadoption.html" class="card" data-category="frontend">
                     <img src="img/picks/iat235-petadoption.png" alt="An image of the Pet Adoption Services project" class="img-project">
                     <h3>Pet Adoption Services</h3>
                     <h4>Front-End Developer</h4>
@@ -79,7 +79,7 @@ On: January 22, 2026
                 </a>
                 
                 <!-- 2025/08 - Tap&Go Audio Stick -->
-                <a id="project_iat238_audiostick" href="projects/iat238-audiostick.html" class="card" data-category="uxui sound">
+                <a tabindex="32" id="project_iat238_audiostick" href="projects/iat238-audiostick.html" class="card" data-category="uxui sound">
                     <img src="img/picks/iat238-audiostick.png" alt="An image of the Tap&Go Audio Stick project" class="img-project">
                     <h3>Tap&Go Audio Stick</h3>
                     <h4>Lead Designer</h4>
@@ -88,7 +88,7 @@ On: January 22, 2026
                 </a>
 
                 <!-- 2023/10 - Career Centre Banner -->
-                <a id="project_client-careerbanner" href="projects/client-careerbanner.html" class="card" data-category="uxui">
+                <a tabindex="33" id="project_client-careerbanner" href="projects/client-careerbanner.html" class="card" data-category="uxui">
                     <img src="img/picks/client-careerbanner.jpg" alt="An image of the Career Centre Banner project" class="img-project bottomview">
                     <h3>Career Centre Banner</h3>
                     <h4>Designer</h4>
@@ -104,8 +104,6 @@ On: January 22, 2026
             <p class="sans">Established in 2018. Incorporated in Canada in 2021.</p>
         </footer>
 
-        <script src="js/filter.js"></script>
-        <script src="js/lightbox.js"></script>
-        <script src="js/copypaste.js"></script>
+        <script src="js/user.js"></script>
     </body>
 </html>
