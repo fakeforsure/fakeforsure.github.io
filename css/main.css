@@ -386,7 +386,7 @@ footer {
     margin-top: 0.25rem;
 
     &::after {
-        content: "🡥";
+        content: "🌐";
         flex: 0 0 auto;
     }
 }
@@ -434,11 +434,11 @@ footer {
     }
 
     &.out_link h5::after {
-        content: "🡥";
+        content: "🌐";
     }
 
     &.no_link h5::after {
-        content: "X";
+        content: "❌";
     }
 }
 
