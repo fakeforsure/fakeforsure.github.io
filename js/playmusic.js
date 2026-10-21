@@ -1,6 +1,6 @@
 /*
 Play Music - Fakeforsure
-By: Luc Bassaler-Merpillat
+By: Alice Bassaler-Merpillat
 On: August 7, 2025
 */
 

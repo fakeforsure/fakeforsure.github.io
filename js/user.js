@@ -1,6 +1,6 @@
 /*
 User JavaScript - Portfolio
-By: Luc Bassaler-Merpillat
+By: Alice Bassaler-Merpillat
 On: September 15, 2026
 */
 

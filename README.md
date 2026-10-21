@@ -1,6 +1,6 @@
 <!-- 
 README MD File - Portfolio
-By: Luc Bassaler-Merpillat
+By: Alice Bassaler-Merpillat
 On: December 12, 2025
 -->
 # <mark>Owl Dev</mark>
